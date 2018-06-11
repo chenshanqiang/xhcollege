@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{margin:0px;padding: 0px;}
+		#main{ background-image: url('img/background-index.jpg'); background-repeat:no-repeat; width: 1920px; height: 1080px;  }
+		ul{position: relative;top:730px;left: 135px;width: 200px;}
+		ul li{margin-bottom: 25px; }
+		a{font-size: 20px;text-decoration: none;color: #0A0707;}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<ul>
+			<li id="taiguo" onclick="status('taiguo')"><a href="taiguo/video1.html" >泰国</a></li>
+			<li id="miandian" onclick="status('miandian')"><a href="miandian/video1.html" >缅甸</a></li>
+			<li id="yuenan" onclick="status('yuenan')"><a href="yuenan/video1.html" >越南</a></li>
+			<li id="yinni" onclick="status('yinni')"><a href="yinni/video1.html" >印度尼西亚</a></li>
+			<li id="jianpuzhai" onclick="status('jianpuzhai')"><a href="jianpuzhai/video1.html" >柬埔寨</a></li>
+			<li id="yindu" onclick="status('yindu')"><a href="yindu/video1.html" >印度</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function status(id){
+		var element=document.getElementById(id);
+		element.style.textDecoration='underline';
+
+	}
+	</script>	
+</body>
+</html>
+

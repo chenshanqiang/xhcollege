@@ -1,0 +1,31 @@
+/*
+* @Author: Administrator
+* @Date:   2017-11-09 21:19:36
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-15 12:29:11
+*/
+*{margin:0px;padding: 0px; font-size: 14px;color:#6a6a6a;}
+body{background-image: url('../img/background-player.jpg');background-repeat:no-repeat;width: 1920px;height: 1080px;overflow: hidden;}
+li{list-style: none;}
+#navi,#content{float: left;}
+/* 退出按钮 */
+#exit{ display: inline-block; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; margin-left: 1850px; margin-top:20px; }
+#exit:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+/* 容器 */
+#container{margin-left: 320px;margin-top: 165px;width: 1300px;height: 600px;}
+/* 导航 */
+#navi{border:1px solid #fffdfb;font-size: 18px;}
+#navi img{cursor: pointer;}
+#navi #icon{color: #6a6a6d}
+#navi #a2{background-color: #fffdfb;}
+#navi{width:36%;height: 100%;overflow-y: auto;background-color: }
+/* 内容 */
+#content{width:54%;height:100%; margin-left: 20px;background-color: #fff;}
+#content #title{margin-top: 28px;color: #6a6a6a}
+#content #audio{width: 650px;}
+#content #img{}
+#content #titile_img{height: 88%;}
+#content #title{height: 10%;padding-left: 20px;}
+#content #imgall{height: 90%;margin-left: 20px;}
+#content #audioall{height: 12%;}
+#content #audioone{width: 100%;height: 100%;margin-left: 20px;}

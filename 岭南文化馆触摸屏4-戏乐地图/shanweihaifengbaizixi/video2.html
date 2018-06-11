@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="../ckplayer/ckplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/video.css">
+</head>
+<body>
+	<div id="main">
+		<img id="exit" src="../img/exit.png" onclick="quit()" />
+		<div class="clearfix">
+	        <div id="a1"></div>
+	        <div id="a2" title="收起列表"><img id='stretch' src="../img/stretch.png"  onclick="Close();"></div>
+	        <div id="a3" style="display:none" title="展开列表"><img id='shrink' src="../img/shrink.png"  onclick="Open();"></div>
+	        <div style="display: inline-block;width: 16%;">
+	            <div id="title"><span>岭南文化馆</span>&nbsp;&nbsp;播放列表</div>
+	            <ul id="playerlist">
+	                <li id="vli_0" onclick="playvideo(0)">当官难</li>
+	                <li id="vli_1"></li>
+	                <li id="vli_2"></li>
+	                <li id="vli_3"></li>
+	                <li id="vli_4"></li>
+	                <li id="vli_5"></li>
+	                <li id="vli_6"></li>
+	                <li id="vli_7"></li>
+	                <li id="vli_8"></li>
+	                <li id="vli_9"></li>
+	                <li id="vli_10"></li>
+	                <li id="vli_11"></li>
+	                <li id="vli_12"></li>
+	                <li id="vli_13"></li>
+	                <li id="vli_14"></li>
+	                <li id="vli_15"></li>
+	             </ul>
+	        </div>       
+	    </div>		
+	</div>
+	<script type="text/javascript">
+        function playerstop() {
+            setTimeend();
+        }
+        function setTimeend() {//获取下一部视频的播放ID
+            nowD++;
+            if (nowD >= html5arr.length ) {
+                nowD = 0;
+            }
+            playvideo(nowD);
+        } 
+        function Close() {//关闭播放列表
+            document.getElementById('title').style.display='none';
+            CKobject._K_('a2').style.display = 'none';
+            CKobject._K_('playerlist').style.display = 'none';
+            CKobject._K_('a3').style.display = 'block';
+            CKobject._K_('a1').style.width = '99%';
+            CKobject.getObjectById('ckplayer_a1').width = '99%';
+        }
+        function Open() {//打开播放列表
+            document.getElementById('title').style.display='block';
+            CKobject._K_('a2').style.display = 'block';
+            CKobject._K_('playerlist').style.display = 'block';
+            CKobject._K_('a3').style.display = 'none';
+            CKobject._K_('a1').style.width = '83%';
+            CKobject.getObjectById('ckplayer_a1').width = '83%';
+        }
+        var nowD = 0;//目前播放的视频的编号(在数组里的编号)
+        var html5arr = new Array();//新建一个数组来保存HTML5端用到的视频地址，注意，因为本演示只有一种mp4文件，所以html5下所有用到的视频地址都是相同的，请见谅，另外，该数组是一个二维数组
+        html5arr.push(['../video/shanweihaifengbaizixi/当官难（吴佩锦唱）.mp4->video/mp4']);
+        function playvideo(n) {
+            nowD = n;
+            var flashvars = {
+                f: html5arr[n],
+                c: 0,
+                p: 1,
+                e: 0,
+                my_url: encodeURIComponent(window.location.href)
+            };
+            for (i = 0; i < html5arr.length; i++) {//这里是用来改变右边列表背景色
+                if (i != nowD) {
+                    CKobject._K_('vli_' + i).style.backgroundColor = '#9A792B';
+                }
+                else {
+                    CKobject._K_('vli_' + i).style.backgroundColor = '#9F8035';
+                }
+            }
+            CKobject.embed('ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', true, flashvars, html5arr[n]);
+        } 
+        playvideo(0);
+	</script>
+</body>
+</html>

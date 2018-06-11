@@ -1,0 +1,62 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-25 14:01:10
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-10 15:24:03
+*/
+*{ margin: 0px; padding: 0px; font-size: 12px;}
+#main{ background-image: url('../img/background-index.JPG'); background-repeat: no-repeat; height: 1080px; width: 1920px; position: relative; }
+img{cursor: pointer; }
+span{font-size: 14px;cursor: auto!important;}
+/* 发光闪烁 */	
+@-webkit-keyframes greenPulse {
+	from { background-color: #fff; -webkit-box-shadow: 0 0 9px #fff; }
+	50% { background-color: #ffd536; -webkit-box-shadow: 0 0 27px #ffd536; }
+	to { background-color: #fff; -webkit-box-shadow: 0 0 9px #fff; }
+}		
+li{ list-style:none; }
+a{ color: black; text-decoration: none; margin-left: 10px;}
+a:hover{ color: black;}
+#chaozhousign,#shantousign,#zhanjiangsign,#hainansign,#zhongshansign,#guangfusign,#shanweihaifengsign,#shanweilufengsign,#qingyuansign,#meizhousign,#kejiasign{ animation:greenPulse 1s infinite; width: 35px; height: 35px;border-radius: 50%; }
+#chaozhou li,#shantou li,#zhanjiang li,#hainan li,#zhongshan li,#guangfu li,#shanweihaifeng li,#shanweilufeng li,#qingyuan li,#meizhou li,#kejia li{margin-top: 10px; }
+#chaozhou li:hover,#shantou li:hover,#zhanjiang li:hover,#hainan li:hover,#zhongshan li:hover,#guangfu li:hover,#shanweihaifeng li:hover,#shanweilufeng li:hover,#qingyuan li:hover,#meizhou li:hover,#kejia li:hover{background-color: #fae3df; }
+#chaozhou,#shantou,#zhanjiang,#hainan,#zhongshan,#guangfu,#shanweihaifeng,#shanweilufeng,#qingyuan,#meizhou,#kejia{ overflow-y:auto;overflow-x:hidden;}
+
+.chaozhou:hover,.shantou:hover,.zhanjiang:hover,.hainan:hover,.qingyuan:hover{cursor: pointer;}
+/* 经过列表鼠标指针表位小手形 */
+#chaozhoulist li,#shantoulist li,#zhanjianglist li,#hainanlist li,#zhongshanlist li,#guangfulist li,#shanweihaifenglist li,#shanweilufenglist li,#qingyuanlist li,#meizhoulist li,#kejialist li { cursor: pointer; }
+/* 列表位置 */
+#chaozhoulist,#shantoulist,#zhanjianglist,#hainanlist,#zhongshanlist,#guangfulist,#shanweihaifenglist,#shanweilufenglist,#qingyuanlist,#meizhoulist,#kejialist{ position: absolute; top: 20px; left: 30px; }
+/* 潮州 */
+#chaozhoumain{ position: absolute; top: 370px; left: 1350px; }
+#chaozhou{ display: none; z-index: 1;width: 330px; height: 220px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 汕头 */
+#shantoumain{ position: absolute; top: 420px; left: 1300px; }
+#shantou{ display: none; z-index: 1;width: 219px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 湛江 */
+#zhanjiangmain{ position: absolute; top: 660px; left: 650px; }
+#zhanjiang{ display: none; z-index: 1;width: 150px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 海南 */
+#hainanmain{ position: absolute; top: 880px; left: 600px; }
+#hainan{ display: none; z-index: 1;width: 150px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 中山 */
+#zhongshanmain{ position: absolute; top: 510px; left: 990px; }
+#zhongshan{ display: none; z-index: 1;width: 170px; height: 130px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 广府 */
+#guangfumain{ position: absolute; top: 440px; left: 970px; }
+#guangfu{ display: none; z-index: 1;width: 280px; height: 200px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 汕尾海丰*/
+#shanweihaifengmain{ position: absolute; top: 430px; left: 1170px; }
+#shanweihaifeng{ display: none; z-index: 1;width: 170px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 汕尾陆丰*/
+#shanweilufengmain{ position: absolute; top: 450px; left: 1230px; }
+#shanweilufeng{ display: none; z-index: 1;width: 250px; height: 100px; border-radius: 8%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 清远*/
+#qingyuanmain{ position: absolute; top: 250px; left: 860px; }
+#qingyuan{ display: none; z-index: 1;width: 160px; height: 200px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 梅州*/
+#meizhoumain{ position: absolute; top: 290px; left: 1255px; }
+#meizhou{ display: none; z-index: 1;width: 200px; height: 150px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 客家*/
+#kejiamain{ position: absolute; top: 270px; left: 1320px; }
+#kejia{ display: none; z-index: 1;width: 330px; height: 160px; border-radius: 5%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }

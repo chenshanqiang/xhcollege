@@ -1,0 +1,62 @@
+﻿/*
+* @Author: Administrator
+* @Date:   2017-10-25 14:01:10
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-10 15:21:24
+*/
+*{ margin: 0px; padding: 0px; font-size: 12px;}
+#main{ background-image: url('../img/background-index.JPG'); background-repeat: no-repeat; height: 1080px; width: 1920px; position: relative; }
+img{cursor: pointer; }
+span{font-size: 14px;cursor: auto!important;}
+/* 发光闪烁 */	
+@-webkit-keyframes greenPulse {
+	from { background-color: #fff; -webkit-box-shadow: 0 0 9px #fff; }
+	50% { background-color: #ffd536; -webkit-box-shadow: 0 0 27px #ffd536; }
+	to { background-color: #fff; -webkit-box-shadow: 0 0 9px #fff; }
+}		
+li{ list-style:none; }
+a{ color: black; text-decoration: none; margin-left: 10px;}
+a:hover{ color: black;}
+#chaozhousign,#shantousign,#zhanjiangsign,#hainansign,#zhongshansign,#guangfusign,#shanweihaifengsign,#shanweilufengsign,#qingyuansign,#meizhousign,#kejiasign{ animation:greenPulse 1s infinite; width: 35px; height: 35px;border-radius: 50%; }
+#chaozhou li,#shantou li,#zhanjiang li,#hainan li,#zhongshan li,#guangfu li,#shanweihaifeng li,#shanweilufeng li,#qingyuan li,#meizhou li,#kejia li{margin-top: 10px; }
+#chaozhou li:hover,#shantou li:hover,#zhanjiang li:hover,#hainan li:hover,#zhongshan li:hover,#guangfu li:hover,#shanweihaifeng li:hover,#shanweilufeng li:hover,#qingyuan li:hover,#meizhou li:hover,#kejia li:hover{background-color: #fae3df; }
+#chaozhou,#shantou,#zhanjiang,#hainan,#zhongshan,#guangfu,#shanweihaifeng,#shanweilufeng,#qingyuan,#meizhou,#kejia{ overflow-y:auto;overflow-x: hidden; }
+
+
+/* 经过列表鼠标指针表位小手形 */
+#chaozhoulist li,#shantoulist li,#zhanjianglist li,#hainanlist li,#zhongshanlist li,#guangfulist li,#shanweihaifenglist li,#shanweilufenglist li,#qingyuanlist li,#meizhoulist li,#kejialist li { cursor: pointer; }
+/* 列表位置 */
+#chaozhoulist,#shantoulist,#zhanjianglist,#hainanlist,#zhongshanlist,#guangfulist,#shanweihaifenglist,#shanweilufenglist,#qingyuanlist,#meizhoulist,#kejialist{ position: absolute; top: 20px; left: 20px; }
+/* 潮州市文祠镇 */
+#chaozhoumain{ position: absolute; top: 320px; left: 1350px; }
+#chaozhou{ display: none; z-index: 1; width: 140px; height: 120px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 潮州市湘桥区 */
+#shantoumain{ position: absolute; top: 350px; left: 1290px; }
+#shantou{ display: none; z-index: 1;width: 130px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 雷州市*/
+#zhanjiangmain{ position: absolute; top: 695px; left: 630px; }
+#zhanjiang{ display: none; z-index: 1;width: 150px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 海南琼中黎族*/
+#hainanmain{ position: absolute; top: 900px; left: 600px; }
+#hainan{ display: none; z-index: 1;width: 180px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 中山市坦洲镇*/
+#zhongshanmain{ position: absolute; top: 530px; left: 970px; }
+#zhongshan{ display: none; z-index: 1;width: 190px; height: 130px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 佛山市杏坛镇 */
+#guangfumain{ position: absolute; top: 420px; left: 930px; }
+#guangfu{ display: none; z-index: 1;width: 150px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 湛江市麻章区*/
+#shanweihaifengmain{ position: absolute; top: 630px; left: 620px; }
+#shanweihaifeng{ display: none; z-index: 1; width: 140px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 汕尾城区*/
+#shanweilufengmain{ position: absolute; top: 500px; left: 1200px; }
+#shanweilufeng{ display: none; z-index: 1;width: 130px; height: 100px; border-radius: 8%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 清远市连南瑶族自治县 瑶族民歌*/
+#qingyuanmain{ position: absolute; top: 250px; left: 860px; }
+#qingyuan{ display: none; z-index: 1; width: 200px; height: 150px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 海南临高*/
+#meizhoumain{ position: absolute; top: 820px; left: 580px; }
+#meizhou{ display: none; z-index: 1; width: 180px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 梅州大埔*/
+#kejiamain{ position: absolute; top: 260px; left: 1320px; }
+#kejia{ display: none; z-index: 1; width: 180px; height: 160px; border-radius: 5%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }

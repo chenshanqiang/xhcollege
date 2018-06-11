@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/list.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+	    /* 导航第一部分 */
+	    #a2  li span{line-height: 40px;height: 40px;}
+		#a211 li,#a212 li,#a21311 li,#a21312 li,#a21411 li,#a21412 li,#a215 li,#a216 li,#a217 li{height: 40px;line-height: 40px; cursor: pointer;}
+		#a2 span{padding-left: 2em;line-height: 40px;height: 40px;}
+
+		#first_one span,#first_two span,#first_three span,#first_four span,#first_five span,#first_six span,#first_seven span{padding-left: 3em;}
+		#a211 li,#a212 li,#a215 li,#a216 li,#a217 li{padding-left: 4em;}
+		#a2131 span,#a2132 span,#a2141 span,#a2142 span{padding-left: 4em;}
+		#a21311 li ,#a21312 li,#a2141 li,#a21412 li{padding-left: 5em;}
+
+		/* 导航第二部分 */
+		#a221,#a222{padding-left:3em; }
+		#a223>span{padding-left:3em; }
+		#a2231>li{padding-left: 4em; }
+		#a2241>li{padding-left: 3em;}
+		#a2251>li>span{padding-left: 3em; height: 40px;line-height: 40px;}
+		#a22511 li,#a22512 li{padding-left: 4em;}
+		#a221,#a222,#a2231 li,#a2241 li,#a22511 li,#a22512 li{height: 40px;line-height: 40px;cursor: pointer;}
+	</style>
+</head>
+<body>
+	<img id="exit" src="img/exit.png" onclick="ReturnMainPage()" />
+	<div id="container" style="height: 700px;">
+		<!-- 导航栏 -->
+		<div id="navi">
+			<span style="display:block;background-color: #f7efdf;height:40px;font-size: 18px;width: 100%;line-height:40px;overflow: hidden;"  onclick='show("a2","icon")'>&nbsp;&nbsp;&nbsp;<img id='icon' src="img/jian.png" style="vertical-align: middle;"/>&nbsp;&nbsp;&nbsp;兼用三分三倍与五分五倍生律法所构成的调式体系</span>
+			<ul id='a2' style="display:block;padding-top: 10px;">
+				<li id='first'>
+					<span  onclick='status("a21","icona")'><img id='icona' src="img/up.png" style="vertical-align: middle;"/>&nbsp;&nbsp;欧洲七声自然调式</span>
+					<ul id='a21' style="display: block;padding-top: 5px;">
+						<li id="first_one">
+							<span onclick='status("a211","icona1")'><img id='icona1' src="img/up.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Lydia调式</span>
+							<ul id="a211" style="display: block;padding-top: 5px;">
+								<li id="a2111" onclick='contentchange("a2111")' style="background-color: #fcf8ef;">Lydia调式的功能构成</li>
+								<li id="a2112" onclick='contentchange("a2112")'>Lydia调式的音阶构成</li>
+							</ul>
+						</li>
+						<li id="first_two">
+							<span onclick='status("a212","icona2")'><img id='icona2' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Ionia（自然大调）调式</span>
+							<ul id="a212" style="display: none;padding-top: 5px;">
+								<li id="a2121" onclick='contentchange("a2121")'>Ionia（自然大调）的功能构成</li>
+								<li id="a2122" onclick='contentchange("a2122")'>Ionia（自然大调）的音阶结构</li>
+							</ul>
+						</li>
+						<li id="first_three">
+							<span onclick='status("a213","icona3")'><img id='icona3' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Mixolydia调式</span>
+							<ul id="a213" style="display: none;padding-top: 5px;">
+								<li id="a2131">								
+									<span onclick='status("a21311","icona31")'><img id='icona31' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Mixolydia调式古老理解的功能结构</span>
+									<ul id="a21311" style="display: none;padding-top: 5px;">
+										<li id="a213111" onclick='contentchange("a213111")'>Mixolydia调式古老理解的功能构成</li>
+										<li id="a213112" onclick='contentchange("a213112")'>Mixolydia调式古老理解的音节构成</li>
+									</ul>
+								</li>
+								<li id="a2132">					
+									<span onclick='status("a21312","icona32")'><img id='icona32' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Mixolydia调式近代处理</span>
+									<ul id="a21312" style="display: none;padding-top: 5px;">
+										<li id="a213211" onclick='contentchange("a213211")'>Mixolydia调式近代处理的功能构成</li>
+										<li id="a213212" onclick='contentchange("a213212")'>Mixolydia调式近代处理的音节构成</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li id="first_four"><span onclick='status("a214","icona4")'><img id='icona4' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Doria调式</span>
+							<ul id="a214" style="display: none;padding-top: 5px;">
+								<li id="a2141" onclick='contentchange("a2141")'>
+									<span  onclick='status("a21411","icona41")'><img id='icona41' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Doria调式古老理解</span>
+									<ul id='a21411' style="display: none;padding-top: 5px;">
+										<li id='a214111' onclick='contentchange("a214111")'>Doria调式古老理解的功能构成</li>
+										<li id='a214112' onclick='contentchange("a214112")'>Doria调式古老理解的音节构成</li>
+									</ul>
+								</li>
+								<li id="a2142" onclick='contentchange("a2142")'>			
+									<span onclick='status("a21412","icona42")'><img id='icona42' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Doria调式近代处理</span>
+									<ul id='a21412' style="display: none;padding-top: 5px;">
+										<li id='a214211' onclick='contentchange("a214211")'>Doria调式近代处理的功能构成</li>
+										<li id='a214212' onclick='contentchange("a214212")'>Doria调式近代处理的音节构成</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li id="first_five">								
+							<span onclick='status("a215","icona5")'><img id='icona5' src="img/down.png" style="vertical-align: middle;" />&nbsp;&nbsp;Aeolia调式（自然小调）</span>
+							<ul id="a215" style="display: none;padding-top: 5px;">
+								<li id="a2151" onclick='contentchange("a2151")'>自然小调的功能构成</li>
+								<li id="a2152" onclick='contentchange("a2152")'>自然小调的音阶构成</li>
+							</ul>
+						</li>
+						<li id="first_six">							
+							<span onclick='status("a216","icona6")'><img id='icona6' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Phrygia调式</span>
+							<ul id="a216" style="display: none;padding-top: 5px;">
+								<li id="a2161" onclick='contentchange("a2161")'>Phrygia调式的功能构成</li>
+								<li id="a2162" onclick='contentchange("a2162")'>Phrygia调式的音阶构成</li>
+							</ul>
+						</li>
+						<li id="first_seven">					
+							<span onclick='status("a217","icona7")'><img id='icona7' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;Loria调式</span>
+							<ul id="a217" style="display: none;padding-top: 5px;">
+								<li id="a2171" onclick='contentchange("a2171")'>Loria调式的功能构成</li>
+								<li id="a2172" onclick='contentchange("a2172")'>Loria调式的音阶构成</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li id='second'>
+					<span onclick='status("a22","iconb")'><img id='iconb' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;古印度七声调式</span>
+					<ul id='a22' style="display: none;padding-top: 5px;">
+						<li id="a221" onclick='contentchange("a221")'>Sadj grama调试</li>
+						<li id="a222" onclick='contentchange("a222")'>Madhyam grama调试</li>
+						<li id="a223">
+							<span  onclick='status("a2231","iconb1")'><img id='iconb1' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;天国音阶三种调试</span>
+							<ul id='a2231' style="display: none;padding-top: 5px;">
+								<li id='a22311' onclick='contentchange("a22311")'>a</li>
+								<li id='a22312' onclick='contentchange("a22312")'>b</li>
+								<li id='a22313' onclick='contentchange("a22313")'>c</li>
+							</ul>
+						</li>
+					</ul>					
+				</li>
+				<li id="a224">
+					<span  onclick='status("a2241","iconb2")'><img id='iconb2' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;茨冈音阶的三种调试</span>
+					<ul id="a2241" style="display: none;padding-top: 5px;">
+						<li id="a22411" onclick='contentchange("a22411")'>a</li>
+						<li id="a22412" onclick='contentchange("a22412")'>b</li>
+						<li id="a22413" onclick='contentchange("a22413")'>c</li>
+					</ul>
+				</li>
+				<li id="a225">
+					<span onclick='status("a2251","iconb3")'><img id='iconb3' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;含五分五倍生律法的五声音阶调试</span>
+					<ul id="a2251" style="display: none;padding-top: 5px;">
+						<li>
+							<span  onclick='status("a22511","iconb31")'><img id='iconb31' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;亮彩五声音阶</span>
+							<ul id="a22511" style="display: none;padding-top: 5px;">
+								<li id="a225111" onclick='contentchange("a225111")'>①</li>
+								<li id="a225112" onclick='contentchange("a225112")'>②</li>
+								<li id="a225113" onclick='contentchange("a225113")'>③</li>
+							</ul>
+						</li>
+						<li>
+							<span  onclick='status("a22512","iconb32")'><img id='iconb32' src="img/down.png" style="vertical-align: middle;"/>&nbsp;&nbsp;暗彩五声音阶</span>
+							<ul id="a22512" style="display: none;padding-top: 5px;">
+								<li id="a225121" onclick='contentchange("a225121")'>①</li>
+								<li id="a225122" onclick='contentchange("a225122")'>②</li>
+								<li id="a225123" onclick='contentchange("a225123")'>③</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>				
+		</div>
+		<!-- 内容 -->
+		<div id='content'>
+			
+				<div id="titile_img" >
+					<div id='imgall' style="margin-top: 28px;">
+						<img id="img" src="img/17.jpg">
+					</div>
+				</div>
+				<div id='audioall'>
+					<div id='audioone'>
+						<audio id="audio" src="song/20.mp3" controls="controls">
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</div>
+		</div> 
+	</div>
+	<script type="text/javascript">
+		function ReturnMainPage(){//返回主界面
+			window.location.href="index.html";
+		}
+		function contentchange(id) {
+			switch (id)
+			{
+				case 'a2111':
+					document.getElementById('a2111').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+
+					document.getElementById('img').src='img/17.jpg';
+					document.getElementById('audio').src='song/20.mp3';
+					break;
+				case 'a2112':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/18.jpg';
+					document.getElementById('audio').src='song/21.mp3';
+					break;
+				case 'a2121':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/19.jpg';
+					document.getElementById('audio').src='song/22.mp3';
+					break;
+				case 'a2122':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fcf8ef';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/20.jpg';
+					document.getElementById('audio').src='song/23.mp3';
+					break;
+				case 'a213111':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fcf8ef';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/21.jpg';
+					document.getElementById('audio').src='song/24.mp3';
+					break;
+				case 'a213112':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fcf8ef';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/22.jpg';
+					document.getElementById('audio').src='song/25.mp3';
+					break;
+				case 'a213211':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fcf8ef';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/23.jpg';
+					document.getElementById('audio').src='song/26.mp3';
+					break;
+				case 'a213212':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fcf8ef';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/24.jpg';
+					document.getElementById('audio').src='song/27.mp3';
+					break;	
+				case 'a214111':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fcf8ef';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/25.jpg';
+					document.getElementById('audio').src='song/28.mp3';
+					break;
+				case 'a214112':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fcf8ef';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/26.jpg';
+					document.getElementById('audio').src='song/29.mp3';
+					break;
+				case 'a214211':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fcf8ef';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/27.jpg';
+					document.getElementById('audio').src='song/30.mp3';
+					break;
+				case 'a214212':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/28.jpg';
+					document.getElementById('audio').src='song/31.mp3';
+					break;
+				case 'a2151':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/29.jpg';
+					document.getElementById('audio').src='song/32.mp3';
+					break;
+				case 'a2152':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/30.jpg';
+					document.getElementById('audio').src='song/33.mp3';
+					break;
+				case 'a2161':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/31.jpg';
+					document.getElementById('audio').src='song/34.mp3';
+					break;
+				case 'a2162':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a223').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+
+					document.getElementById('img').src='img/32.jpg';
+					document.getElementById('audio').src='song/35.mp3';
+					break;
+				case 'a2171':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fcf8ef';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/33.jpg';
+					document.getElementById('audio').src='song/36.mp3';
+					break;
+				case 'a2172':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fcf8ef';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/34.jpg';
+					document.getElementById('audio').src='song/37.mp3';
+					break;
+				case 'a221':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fcf8ef';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/35.jpg';
+					document.getElementById('audio').src='song/38.mp3';
+					break;
+				case 'a222':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fcf8ef';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+
+					document.getElementById('img').src='img/36.jpg';
+					document.getElementById('audio').src='song/39.mp3';
+					break;
+				case 'a22311':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fcf8ef';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/37.jpg';
+					document.getElementById('audio').src='song/40.mp3';
+					break;
+				case 'a22312':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fcf8ef';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/37.jpg';
+					document.getElementById('audio').src='song/41.mp3';
+					break;
+				case 'a22313':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fcf8ef';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/37.jpg';
+					document.getElementById('audio').src='song/42.mp3';
+					break;				
+				case 'a22411':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fcf8ef';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/38.jpg';
+					document.getElementById('audio').src='song/43.mp3';
+					break;
+				case 'a22412':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fcf8ef';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/38.jpg';
+					document.getElementById('audio').src='song/44.mp3';
+					break;
+				case 'a22413':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fcf8ef';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/38.jpg';
+					document.getElementById('audio').src='song/45.mp3';
+					break;
+				case 'a225111':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fcf8ef';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/39.jpg';
+					document.getElementById('audio').src='song/46.mp3';
+					break;
+				case 'a225112':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fcf8ef';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/39.jpg';
+					document.getElementById('audio').src='song/47.mp3';
+					break;
+				case 'a225113':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fcf8ef';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/39.jpg';
+					document.getElementById('audio').src='song/48.mp3';
+					break;
+				case 'a225121':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fcf8ef';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/40.jpg';
+					document.getElementById('audio').src='song/49.mp3';
+					break;
+				case 'a225122':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fcf8ef';
+					document.getElementById('a225123').style.backgroundColor='#fffdfb';
+					
+					document.getElementById('img').src='img/40.jpg';
+					document.getElementById('audio').src='song/50.mp3';
+					break;
+				case 'a225123':
+					document.getElementById('a2111').style.backgroundColor='#fffdfb';
+					document.getElementById('a2112').style.backgroundColor='#fffdfb';
+					document.getElementById('a2121').style.backgroundColor='#fffdfb';
+					document.getElementById('a2122').style.backgroundColor='#fffdfb';
+					document.getElementById('a213111').style.backgroundColor='#fffdfb';
+					document.getElementById('a213112').style.backgroundColor='#fffdfb';
+					document.getElementById('a213211').style.backgroundColor='#fffdfb';
+					document.getElementById('a213212').style.backgroundColor='#fffdfb';
+					document.getElementById('a214111').style.backgroundColor='#fffdfb';
+					document.getElementById('a214112').style.backgroundColor='#fffdfb';
+					document.getElementById('a214211').style.backgroundColor='#fffdfb';
+					document.getElementById('a214212').style.backgroundColor='#fffdfb';
+					document.getElementById('a2151').style.backgroundColor='#fffdfb';
+					document.getElementById('a2152').style.backgroundColor='#fffdfb';
+					document.getElementById('a2161').style.backgroundColor='#fffdfb';
+					document.getElementById('a2162').style.backgroundColor='#fffdfb';
+					document.getElementById('a2171').style.backgroundColor='#fffdfb';
+					document.getElementById('a2172').style.backgroundColor='#fffdfb';
+					document.getElementById('a221').style.backgroundColor='#fffdfb';
+					document.getElementById('a222').style.backgroundColor='#fffdfb';
+					document.getElementById('a22311').style.backgroundColor='#fffdfb';
+					document.getElementById('a22312').style.backgroundColor='#fffdfb';
+					document.getElementById('a22313').style.backgroundColor='#fffdfb';
+					document.getElementById('a22411').style.backgroundColor='#fffdfb';
+					document.getElementById('a22412').style.backgroundColor='#fffdfb';
+					document.getElementById('a22413').style.backgroundColor='#fffdfb';
+					document.getElementById('a225111').style.backgroundColor='#fffdfb';
+					document.getElementById('a225112').style.backgroundColor='#fffdfb';
+					document.getElementById('a225113').style.backgroundColor='#fffdfb';
+					document.getElementById('a225121').style.backgroundColor='#fffdfb';
+					document.getElementById('a225122').style.backgroundColor='#fffdfb';
+					document.getElementById('a225123').style.backgroundColor='#fcf8ef';
+					
+					document.getElementById('img').src='img/40.jpg';
+					document.getElementById('audio').src='song/51.mp3';
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

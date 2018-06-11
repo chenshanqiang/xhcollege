@@ -1,0 +1,355 @@
+﻿/**
+ * Created by Smohan on 2015/5/15.
+ */
+/*儿童歌曲*/   
+var childernmusicList = [
+	{
+		title : '祖国的孩子们',
+        singer : '中央人民广播电台少年广播合唱团',
+        /*cover  : null,*/
+        src    : 'src/songs/childrensongs/zu_guo_de_hai_zi_men.mp3',
+		lyric  : "src/songs/childrensongs/zu_guo_de_hai_zi_men.lrc"
+		
+	},
+    {
+        title : '只怕不抵抗',
+        singer : '银河少年合唱团',
+        /*cover  : null,*/
+        src    : 'src/songs/childrensongs/zhi_pai_bu_di_kang01.mp3',
+		lyric  : "src/songs/childrensongs/zhi_pai_bu_di_kang01.lrc"
+    },
+	{	
+		title:'只怕不抵抗',
+		singer:'银河少年合唱团',
+		src:'src/songs/childrensongs/zhi_pai_bu_di_kang02.mp3',
+		lyric:null		
+	}
+];
+
+
+/*群众歌曲*/
+var massmusicList = [
+	{
+		title:'救国军歌（1935）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/jiu_guo_jun_ge02.mp3',
+		lyric:'src/songs/masssongs/jiu_guo_jun_ge01.lrc'	
+	},
+	{
+		title:'救国军歌（1935）',
+		singer:'上海交响乐团（1995）',
+		src:'src/songs/masssongs/jiu_guo_jun_ge01.mp3',
+		lyric:null	
+	},
+	{
+		title:'保卫卢沟桥（1937）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/bao_wei_lu_gou_qiao01.mp3',
+		lyric:'src/songs/masssongs/bao_wei_lu_gou_qiao01.lrc'		
+	},
+	{
+		title:'保卫卢沟桥（1937）',
+		singer:'中国交响乐团合唱团',
+		src:'src/songs/masssongs/bao_wei_lu_gou_qiao02.mp3',
+		lyric:'src/songs/masssongs/bao_wei_lu_gou_qiao01.lrc'		
+	},	
+	{
+		title:'到敌人后方去（1938）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/dao_di_ren_hou_fang_qu03.mp3',
+		lyric:'src/songs/masssongs/dao_di_ren_hou_fang_qu01.lrc'	
+	},
+	{
+		title:'到敌人后方去（1938）',
+		singer:'上海交响乐团（1995）',
+		src:'src/songs/masssongs/dao_di_ren_hou_fang_qu02.mp3',
+		lyric:null	
+	},
+	{
+		title:'到敌人后方去（1938）',
+		singer:'音乐舞蹈史诗《东方红》（1964）',
+		src:'src/songs/masssongs/dao_di_ren_hou_fang_qu01.mp3',
+		lyric:null	
+	},
+	{
+		title:'路是我们开（1938）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/lu_shi_wo_men_kai.mp3',
+		lyric:'src/songs/masssongs/lu_shi_wo_men_kai.lrc'	
+	},	
+	{
+		title:'游击军（1938）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/you_ji_jun02.mp3',
+		lyric:null	
+	},
+	{
+		title:'游击军（1938）',
+		singer:'上海交响乐团（1995）',
+		src:'src/songs/masssongs/you_ji_jun01.mp3',
+		lyric:'src/songs/masssongs/you_ji_jun01.lrc'
+	},	
+	{
+		title:'在太行山上（1938）',
+		singer:'中国交响乐团合唱团（2005）',
+		src:'src/songs/masssongs/zai_tai_hang_shan_shang02.mp3',
+		lyric:'src/songs/masssongs/zai_tai_hang_shan_shang01.lrc'
+	},
+	{
+		title:'在太行山上（1938）',
+		singer:'上海交响乐团（1995）',
+		src:'src/songs/masssongs/zai_tai_hang_shan_shang01.mp3',
+		lyric:null
+	},	
+	{
+		title:'赞美新中国（1938）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/zan_mei_xin_zhong_guo.mp3',
+		lyric:null
+	},
+	{
+		title:'做棉衣（1938）',
+		singer:'中国交响乐团合唱团（2005）',
+		src:'src/songs/masssongs/zuo_mian_yi02.mp3',
+		lyric:'src/songs/masssongs/zuo_mian_yi02.lrc'
+	},	
+	{
+		title:'做棉衣（1938）',
+		singer:'刘淑芳',
+		src:'src/songs/masssongs/zuo_mian_yi01.mp3',
+		lyric:'src/songs/masssongs/zuo_mian_yi01.lrc'
+	},
+	{
+		title:'三八妇女节歌（1939）',
+		singer:'上海乐团（2001）',
+		src:'src/songs/masssongs/san_ba_fu_nv_jie_ge02.mp3',
+		lyric:null	
+	},	
+	{
+		title:'三八妇女节歌（1939）',
+		singer:'',
+		src:'src/songs/masssongs/san_ba_fu_nv_jie_ge01.mp3',
+		lyric:'src/songs/masssongs/san_ba_fu_nv_jie_ge01.lrc'	
+	},
+	{
+		title:'满洲囚徒歌',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/masssongs/man_zhou_qiu_tu_ge.mp3',
+		lyric:null	
+	}
+];
+
+/*大合唱*/
+var chorusmusicList = [
+	{
+		title:'黄河船夫曲（1939）',
+		singer:'中央乐团合唱团（1993）',
+		src:'src/songs/chorusmusic/huang_he_quan_fu_qu02.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河船夫曲（1939）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/chorusmusic/huang_he_quan_fu_qu01.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河颂（1939）',
+		singer:'严良堃（1999）',
+		src:'src/songs/chorusmusic/huang_he_song01.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河颂（1939）',
+		singer:'杨洪基',
+		src:'src/songs/chorusmusic/huang_he_song02.mp3',
+		lyric:null
+	},{
+		title:'黄河颂（1939）',
+		singer:'上海乐团管弦乐队（2001）',
+		src:'src/songs/orchestralmusic/huang_he_song.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河之水天上来（1939）',
+		singer:'严良堃',
+		src:'src/songs/chorusmusic/huang_he_zhi_shui_tian_shang_lai01.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河之水天上来（1939）',
+		singer:'中央乐团合唱团',
+		src:'src/songs/chorusmusic/huang_he_zhi_shui_tian_shang_lai02.mp3',
+		lyric:null
+	},
+	{
+		title:'黄水谣（1939）',
+		singer:'中央乐团合唱团',
+		src:'src/songs/chorusmusic/huang_shui_yao.mp3',
+		lyric:null
+	},
+	{
+		title:'河边对口曲（1939）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/chorusmusic/huang_he_bian_dui_chang.mp3',
+		lyric:null
+	},
+	{
+		title:' 河边对口曲（1939）',
+		singer:'李初建',
+		src:'src/songs/chorusmusic/he_bian_dui_kou_chang.mp3',
+		lyric:null
+	},	
+	{
+		title:'黄河怨（1939）',
+		singer:'严良堃（1999）',
+		src:'src/songs/chorusmusic/huang_he_yuan01.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河怨（1939）',
+		singer:'郭淑珍',
+		src:'src/songs/chorusmusic/huang_he_yuan02.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河怨（1939）',
+		singer:'汪燕燕',
+		src:'src/songs/chorusmusic/huang_he_yuan03.mp3',
+		lyric:null
+	},
+	{
+		title:'黄河怨（1939）',
+		singer:'上海乐团管弦乐队（2001）',
+		src:'src/songs/orchestralmusic/huang_he_yuan.mp3',
+		lyric:null
+	},
+	{
+		title:'保卫黄河（1939）',
+		singer:'中央乐团合唱团',
+		src:'src/songs/chorusmusic/bao_wei_huang_he02.mp3',
+		lyric:null
+	},
+	{
+		title:'保卫黄河（1939）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/chorusmusic/bao_wei_huang_he01.mp3',
+		lyric:null
+	},
+	{
+		title:'怒吼吧，黄河（1939）',
+		singer:'中央乐团合唱团',
+		src:'src/songs/chorusmusic/nu_hou_ba_huang_he02.mp3',
+		lyric:null
+	},
+	{
+		title:'怒吼吧，黄河（1939）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/chorusmusic/nu_hou_ba_huang_he01.mp3',
+		lyric:null
+	},
+	{
+		title:'二月里来（1939）',
+		singer:'楼乾贵',
+		src:'src/songs/chorusmusic/er_yue_li_lai.mp3',
+		lyric:'src/songs/chorusmusic/er_yue_li_lai.lrc'
+	},
+	{
+		title:'二月里来（1939）',
+		singer:'上海乐团管弦乐队（2001）',
+		src:'src/songs/orchestralmusic/er_yue_li_lai.mp3',
+		lyric:null
+	},
+	{
+		title:'酸枣刺（1939）',
+		singer:'中央人民广播电台少年广播合唱团',
+		src:'src/songs/chorusmusic/suan_zhao_ci.mp3',
+		lyric:'src/songs/chorusmusic/suan_zhao_ci.lrc'
+	},
+	{
+		title:'酸枣刺（1939）',
+		singer:'上海乐团管弦乐队（2001）',
+		src:'src/songs/orchestralmusic/suan_zhao_ci.mp3',
+		lyric:null
+	},
+	{
+		title:'“九一八”大合唱（1939）',
+		singer:'上海歌剧院合唱团',
+		src:'src/songs/chorusmusic/jiu_yi_ba_da_he_chang.mp3',
+		lyric:null
+	}
+];
+
+
+/*室内乐*/
+var chambermusicList = [
+	{
+		title:'女高音、单簧管与钢琴《风》（1933）',
+		singer:'中国交响乐团合唱团（1995）',
+		src:'src/songs/chambermusic/feng.mp3',
+		lyric:null
+	}
+];
+
+/*艺术歌曲*/
+var artmusicList = [
+	{
+		title:'热血(1936)',
+		singer:'金山（1937）',
+		src:'src/songs/artsongs/re_xue01.mp3',
+		lyric:'src/songs/artsongs/re_xue02.lrc'
+	},
+	{
+		title:'热血（1936）',
+		singer:'刘秉义',
+		src:'src/songs/artsongs/re_xue02.mp3',
+		lyric:'src/songs/artsongs/re_xue02.lrc'
+	},
+	{
+		title:'黄河之恋（1937）',
+		singer:'施超（1937）',
+		src:'src/songs/artsongs/huang_he_zhi_lian01.mp3',
+		lyric:'src/songs/artsongs/huang_he_zhi_lian01.lrc'
+	},
+	{
+		title:'黄河之恋（1937）',
+		singer:'施鸿鄂',
+		src:'src/songs/artsongs/huang_he_zhi_lian02.mp3',
+		lyric:'src/songs/artsongs/huang_he_zhi_lian02.lrc'
+	},
+	{
+		title:'夜半歌声（1937）',
+		singer:'上海乐团（2001）',
+		src:'src/songs/artsongs/ye_ban_ge_sheng.mp3',
+		lyric:null
+	},
+	{
+		title:'江南三月（1938）',
+		singer:'中国交响乐团合唱团（1999）',
+		src:'src/songs/artsongs/jiang_nan_san_yue01.mp3',
+		lyric:'src/songs/artsongs/jiang_nan_san_yue01.lrc'
+	},
+	{
+		title:'江南三月（1938）',
+		singer:'王玉文',
+		src:'src/songs/artsongs/jiang_nan_san_yue02.mp3',
+		lyric:'src/songs/artsongs/jiang_nan_san_yue02.lrc'
+	},
+	{
+		title:'战时催眠曲',
+		singer:'高芝兰',
+		src:'src/songs/artsongs/zhan_shi_cui_mian_qu.mp3',
+		lyric:'src/songs/artsongs/zhan_shi_cui_mian_qu.lrc'
+	}
+
+];
+
+/*管弦乐*/
+var orchestralmusicList = [
+	{
+		title:'中国狂想曲（1945）',
+		singer:'指挥：彭修文',
+		src:'src/songs/orchestralmusic/zhong_guo_kuang_xiang_qu.mp3',
+		lyric:null
+	}
+];

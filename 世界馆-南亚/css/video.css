@@ -1,0 +1,20 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-24 11:35:08
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-07 11:02:22
+*/
+*{ padding: 0px; margin: 0px; font-size: 12px; color:#fff; }
+body{overflow: hidden;}
+#exit{ display: inline-block; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; margin-left: 1850px; margin-top:20px; }
+#exit:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+#main{ background-image: url('../img/background-video.JPG'); background-repeat: no-repeat; width: 1920px; height: 1080px; }
+.clearfix{ width: 90%; height: 75%; position: relative; top: 4%; left: 5%; }
+#title{background-color: #62480A;width: 90%;height: 50px;line-height: 50px; padding-left:10%; }
+span{ font-family:微软雅黑; font-size: 16px; }
+#a1 { width: 83%; height: 100%; float: left; }
+#a2, #a3 { width: 0.9%; height: 100%; float: left; color: #FFF; background-color: #25262A; line-height: 800px;}
+img{ cursor:pointer; }
+#playerlist {width: 100%; height: 760px; overflow: auto; float: left; background-color: #9A792B; font-size: 12px; }
+#playerlist li { list-style: none; height: 40px; line-height: 40px; padding-bottom: 2px; border-bottom: 1px solid #9F8035; overflow: hidden; padding-left: 10%; cursor:pointer; }
+#shrink{ margin-left: 6px; }

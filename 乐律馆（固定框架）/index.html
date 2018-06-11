@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{margin:0px; padding: 0px;}
+		#main{width: 1920px;margin:0px auto;height: 1080px;}
+		#content{width: 670px;margin:0px auto;padding-top: 200px;height: 800px;}
+		span{cursor: pointer;}
+		li{ list-style: none;margin-bottom: 20px; }
+		.font-size{font-size: 26px;font-family: '微软雅黑';}
+		#a3>li{font-size: 20px;padding-left: 2em;}
+		a{text-decoration: none;color: black;}
+	</style>
+</head>
+<body style="overflow: hidden;">
+	<div id="main" style="background-image: url(img/background-player.jpg);background-repeat: no-repeat;">
+		<div id='content' style="overflow: hidden;">
+			<ul>
+				<li class='font-size'><a href='second.html'>一、各种生律法所产生音程的初步展示</a></li>
+				<li>
+					<span onclick='show("a3")' class='font-size'>二、运用不同生律法所产生的调式结构的分类说明</span>
+					<ul id='a3' style="display:block;margin-top: 20px;">
+						<li><a href='third-one.html'>1、运用三分三倍生律法所构成的五声音阶调式体系的同主音综合观念</a></li>
+						<li><a href='third-two.html'>2、兼用三分三倍与五分五倍生律法所构成的调式体系的分类说明</a></li>
+						<li><a href='third_four.html'>3、含有中立音音位的各种调式</a></li>
+						<li><a href='third-three.html'>4、大量运用七分七倍生律法所构成的甘美兰调式体系</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function show(id) {
+			if (document.getElementById(id).style.display == 'none') {
+				document.getElementById(id).style.display = 'block';
+			} else {
+				document.getElementById(id).style.display = 'none';
+			}
+		}
+	</script>
+</body>
+</html>

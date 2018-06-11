@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/list.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+       	#a2 span{ padding-left: 3em; line-height: 40px;height: 40px;}
+		#a2 li span{cursor: pointer;}
+		.title{width: 10%;margin:0 auto;}
+	</style>
+</head>
+<body>
+	<img id="exit" src="img/exit.png" onclick="ReturnMainPage()" />
+	<div id="container">
+		<!-- 导航栏 -->
+		<div id="navi">
+			<span style="display:block;background-color: #f7efdf;height:40px;font-size: 18px;width: 100%;line-height:40px;height: 40px;"  onclick='show("a2","icon")'>&nbsp;&nbsp;&nbsp;<img id='icon' src="img/jian.png" style="vertical-align: middle;"/>&nbsp;&nbsp;&nbsp;大量运用七分七倍生律法所构成的甘美兰调式体系</span>
+			<ul id='a2' style="display:block;padding-top: 10px;">
+				<li id='first' style="background-color: #fcf8ef">
+					<span  onclick='contentchange("content1")'>七分生律法</span>
+				</li>
+				<li id='second'>
+					<span  onclick='contentchange("content2")'>七倍生律法</span>
+										
+				</li>
+				<li id='third'>
+					<span  onclick='contentchange("content3")'>混合运用七分七倍生律法</span>
+				</li>
+			</ul>	
+		</div>
+		<!-- 内容 -->
+		<div id='content'>
+			<div id="content1" style="overflow-x:hidden;overflow-y: auto;height: 100%;display: block;">
+				<div class="title">A</div>			
+				<img id="img" src="img/41.jpg">									
+				<audio id="audio" src="song/52.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">B</div>					
+				<img id="img" src="img/42.jpg">									
+				<audio id="audio" src="song/53.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">C</div>								
+				<img id="img" src="img/43.jpg">							
+				<audio id="audio" src="song/54.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">D</div>									
+				<img id="img" src="img/44.jpg">									
+				<audio id="audio" src="song/55.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">E</div>									
+				<img id="img" src="img/45.jpg">								
+				<audio id="audio" src="song/56.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">F</div>									
+				<img id="img" src="img/46.jpg">								
+				<audio id="audio" src="song/57.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">G</div>									
+				<img id="img" src="img/47.jpg">								
+				<audio id="audio" src="song/58.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>				
+			</div>
+			<div id="content2" style="overflow-x:hidden;overflow-y: auto;height: 100%;display: none;">
+				<div class="title">A</div>				
+				<img id="img" src="img/48.jpg">									
+				<audio id="audio" src="song/59.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">B</div>					
+				<img id="img" src="img/49.jpg">									
+				<audio id="audio" src="song/60.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">C</div>								
+				<img id="img" src="img/50.jpg">							
+				<audio id="audio" src="song/61.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>								
+			</div>
+			<div id="content3" style="overflow-x:hidden;overflow-y: auto;height: 100%;display: none;">
+				<div class="title">A</div>				
+				<img id="img" src="img/51.jpg">									
+				<audio id="audio" src="song/62.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">B</div>					
+				<img id="img" src="img/52.jpg">									
+				<audio id="audio" src="song/63.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">C</div>								
+				<img id="img" src="img/53.jpg">							
+				<audio id="audio" src="song/64.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">D</div>									
+				<img id="img" src="img/54.jpg">									
+				<audio id="audio" src="song/65.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">E</div>									
+				<img id="img" src="img/55.jpg">								
+				<audio id="audio" src="song/66.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>
+				<div class="title">F</div>									
+				<img id="img" src="img/56.jpg">								
+				<audio id="audio" src="song/67.mp3" controls="controls">
+					Your browser does not support the audio element.
+				</audio>												
+			</div>
+		</div> 
+	</div>
+	<script type="text/javascript">
+		function ReturnMainPage() { //返回主界面
+			window.location.href = "index.html";
+		}
+
+		function contentchange(id) {
+			switch (id) {
+				case 'content1':
+					document.getElementById('content1').style.display='block';
+					document.getElementById('content2').style.display='none';
+					document.getElementById('content3').style.display='none';
+					document.getElementById('first').style.backgroundColor='#fcf8ef';
+					document.getElementById('second').style.backgroundColor='#fffdfb';
+					document.getElementById('third').style.backgroundColor='#fffdfb';
+					break;
+				case 'content2':
+					document.getElementById('content1').style.display='none';
+					document.getElementById('content2').style.display='block';
+					document.getElementById('content3').style.display='none';
+					document.getElementById('first').style.backgroundColor='#fffdfb';
+					document.getElementById('second').style.backgroundColor='#fcf8ef';
+					document.getElementById('third').style.backgroundColor='#fffdfb';
+					break;
+				case 'content3':
+					document.getElementById('content1').style.display='none';
+					document.getElementById('content2').style.display='none';
+					document.getElementById('content3').style.display='block';
+					document.getElementById('first').style.backgroundColor='#fffdfb';
+					document.getElementById('second').style.backgroundColor='#fffdfb';
+					document.getElementById('third').style.backgroundColor='#fcf8ef';
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

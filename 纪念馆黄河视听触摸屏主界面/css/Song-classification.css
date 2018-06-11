@@ -1,0 +1,19 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-20 10:58:38
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-09 16:21:42
+*/
+*{ padding: 0px; margin:0px; }
+#main{ background-image: url('../img/background-Song-classification.jpg'); background-repeat: no-repeat; height: 1080px; width: 1920px; position: relative;}
+#changescreen{ margin-left: 1850px; margin-top:20px; }
+img{ -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; }
+img:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+.img{position: absolute;top:350px;left: 500px;}
+img{ cursor: pointer; }
+/* #mass-song{ top: 850px; left: 195px; }
+#art-song{ top: 640px; left: 310px; }
+#children-song{ top: 467px; left: 481px; }
+#cantata{ top: 340px; left: 682px; }
+#chamber-music{ top: 254px; left: 901px; }
+#orchestral-music{ top: 193px; left: 1134px; } */

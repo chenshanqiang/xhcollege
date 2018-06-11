@@ -1,0 +1,13 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-27 10:21:59
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-05 22:15:39
+*/
+#navi{ margin-left: 150px; margin-top: 190px; position: relative; max-width: 150px; max-height: 500px; }
+#navi>ul{ margin-bottom: 20px; }
+#onelist li,#twolist li,#threelist li,#fourlist li,#fivelist li,#sixlist li,#sevenlist li,#eightlist li,#ninelist li,#tenlist li{ margin-top: 10px; }
+#onelist,#twolist,#threelist,#fourlist,#fivelist,#sixlist,#sevenlist,#eightlist,#ninelist,#tenlist{ position: absolute; top: 20px; left: 20px; }
+#one span,#two span,#three span,#four span,#five span,#six span,#seven span,#eight span,#nine span,#ten span{ cursor: pointer!important; }
+#onelist span,#twolist span,#threelist span,#fourlist span,#fivelist span,#sixlist span,#sevenlist span,#eightlist span,#ninelist span,#tenlist span{ cursor: auto!important; }
+#onebackground,#twobackground,#threebackground,#fourbackground,#fivebackground,#sixbackground,#sevenbackground,#eightbackground,#ninebackground,#tenbackground{ background-color: #FEF7F6; border: 2px solid #E0DFDA; overflow-y:auto; overflow-x:hidden; border-radius: 5%; z-index:1; display: none; position: absolute; }

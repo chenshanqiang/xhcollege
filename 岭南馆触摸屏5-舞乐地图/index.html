@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<style type="text/css">
+		/* 揭阳市榕城区 */
+		#onebackground{ top: -30px; left: 90px; width: 160px; height: 80px; }
+		/* 潮州市饶平县 */
+		#twobackground{ top:10px; left: 90px; width: 150px; height: 80px; }
+		/* 湛江市雷州市 */
+		#threebackground{ top:50px; left: 90px; width: 180px; height: 130px; }
+		/* 海南 */
+		#fourbackground{ top:80px; left: 90px; width: 150px; height: 80px; }
+		/* 揭阳市惠来县 */
+		#fivebackground{ top:130px; left: 90px; width: 150px; height: 110px; }
+		/* 汕头市  */
+		#sixbackground{ top:160px; left: 90px; width: 150px; height: 80px; }
+		/* 湛江市麻章区  */
+		#sevenbackground{ top:170px; left: 90px; width: 150px; height: 140px; }
+		/* 汕尾海丰  */
+		#eightbackground{ top:240px; left: 90px; width: 150px; height: 80px; }
+		/* 清远连南 */
+		#ninebackground{ top:280px; left: 90px; width: 150px; height: 80px; }
+		/* 梅州大埔 */
+		#tenbackground{ top:320px; left: 90px; width: 140px; height: 80px; }
+	</style>	
+</head>
+<body style="overflow: hidden;">
+	<div id="main">
+		<img/>
+		<div id="navi">
+			<ul id="one" onclick="status('onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>乔林烟花火龙</span>
+					<ul id="onebackground">
+						<li>
+							<ul id="onelist">
+								<li><img src="img/video.PNG"><a href="jieyangrongcheng/video1.html">乔林烟花火龙</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="two" onclick="status('twobackground','onebackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>饶平布马舞</span>
+					<ul id="twobackground">
+						<li>
+							<ul id="twolist">
+								<li><img src="img/video.PNG"><a href="chaozhouraoping/video1.html">饶平布马舞</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="three" onclick="status('threebackground','onebackground','twobackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>雷州市</span>
+					<ul id="threebackground">
+						<li>
+							<ul id="threelist">
+								<span>雷州市：</span>
+								<li><img src="img/video.PNG"><a href="zhanjiangleizhou/video1.html">雷州散花舞</a></li>
+								<li><img src="img/video.PNG"><a href="zhanjiangleizhou/video2.html">雷州乌石蜈蚣舞</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="four" onclick="status('fourbackground','onebackground','twobackground','threebackground','fivebackground','sixbackground','sevenbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>黎族打柴舞</span>
+					<ul id="fourbackground">
+						<li>
+							<ul id="fourlist">
+								<li><img src="img/video.PNG"><a href="hainanqiongzhong/video1.html">黎族打柴舞</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="five" onclick="status('fivebackground','onebackground','twobackground','threebackground','fourbackground','sixbackground','sevenbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>惠来高跷虎狮</span>
+					<ul id="fivebackground">
+						<li>
+							<ul id="fivelist">
+								<li><img src="img/video.PNG"><a href="jieyanghuilai/video1.html">踩高跷</a></li>
+								<li><img src="img/video.PNG"><a href="jieyanghuilai/video2.html">惠来高跷虎狮</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="six" onclick="status('sixbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sevenbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>潮汕英歌</span>
+					<ul id="sixbackground">
+						<li>
+							<ul id="sixlist">
+								<li><img src="img/video.PNG"><a href="shantou/video1.html">潮阳英歌</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="seven" onclick="status('sevenbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','eightbackground','ninebackground','tenbackground')">
+				<li>
+					<span>湛江傩舞、湛江人龙舞</span>
+					<ul id="sevenbackground">
+						<li>
+							<ul id="sevenlist">
+								<li><img src="img/video.PNG"><a href="zhanjiangmazhang/video1.html">考兵</a></li>
+								<li><img src="img/video.PNG"><a href="zhanjiangmazhang/video2.html">舞六将</a></li>
+								<li><img src="img/video.PNG"><a href="zhanjiangmazhang/video3.html">湛江人龙舞</a></li>				
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>			
+			<ul id="eight" onclick="status('eightbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','ninebackground','tenbackground')">
+				<li>
+					<span>海丰麒麟舞</span>
+					<ul id="eightbackground">
+						<li>
+							<ul id="eightlist">
+								<li><img src="img/video.PNG"><a href="shanweihaifeng/video1.html">海丰麒麟舞</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="nine" onclick="status('ninebackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground','tenbackground')">
+				<li>
+					<span>瑶族长鼓舞</span>
+					<ul id="ninebackground">
+						<li>
+							<ul id="ninelist">
+								<li><img src="img/video.PNG"><a href="qingyuanliannan/video1.html">瑶族长鼓舞</a></li>		
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="ten" onclick="status('tenbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground','ninebackground')">
+				<li>
+					<span>梅州鲤鱼灯</span>
+					<ul id="tenbackground">
+						<li>
+							<ul id="tenlist">
+								<li><img src="img/video.PNG"><a href="meizhoudapu/video1.html">梅州鲤鱼灯</a></li>						
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>		
+		<!-- 揭阳市榕城区 -->
+		<ul id="chaozhoumain" onclick="status('chaozhou','shantou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='chaozhousign' src="img/chaozhou.png">
+				<ul id="chaozhou">
+					<li>
+						<ul id="chaozhoulist">
+							<span>揭阳市榕城区：</span>
+							<li><img src="img/video.PNG"><a href="jieyangrongcheng/video1.html">乔林烟花火龙</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 潮州市饶平县 -->
+		<ul id="shantoumain" onclick="status('shantou','chaozhou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='shantousign' src="img/shantou.png">
+				<ul id="shantou">
+					<li>
+						<ul id="shantoulist">
+							<span>潮州市饶平县：</span>
+							<li><img src="img/video.PNG"><a href="chaozhouraoping/video1.html">饶平布马舞</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 湛江雷州-->
+		<ul id="zhanjiangmain" onclick="status('zhanjiang','chaozhou','shantou','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='zhanjiangsign' src="img/zhanjiang.png">
+				<ul id="zhanjiang">
+					<li>
+						<ul id="zhanjianglist">
+							<span>雷州市：</span>
+							<li><img src="img/video.PNG"><a href="zhanjiangleizhou/video1.html">雷州散花舞</a></li>
+							<li><img src="img/video.PNG"><a href="zhanjiangleizhou/video1.html">雷州乌石蜈蚣舞</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!--海南-->
+		<ul id="hainanmain" onclick="status('hainan','chaozhou','shantou','zhanjiang','zhongshan','guangfu','shanweihaifeng','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='hainansign' src="img/hainan.png">
+				<ul id="hainan">
+					<li>
+						<ul id="hainanlist">
+							<span>海南省：</span>
+							<li><img src="img/video.PNG"><a href="hainanqiongzhong/video1.html">黎族打柴舞</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 揭阳市惠来县 -->
+		<ul id="zhongshanmain" onclick="status('zhongshan','chaozhou','shantou','zhanjiang','hainan','guangfu','shanweihaifeng','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='zhongshansign' src="img/zhongshan.png">
+				<ul id="zhongshan">
+					<li>
+						<ul id="zhongshanlist">
+							<span>揭阳市惠来县：</span>
+							<li><img src="img/video.PNG"><a href="jieyanghuilai/video1.html">踩高跷</a></li>
+							<li><img src="img/video.PNG"><a href="jieyanghuilai/video2.html">惠来高跷虎狮</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 汕头市 -->
+		<ul id="guangfumain" onclick="status('guangfu','chaozhou','shantou','zhanjiang','hainan','zhongshan','shanweihaifeng','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='guangfusign' src="img/guangfu.png">
+				<ul id="guangfu">
+					<li>
+						<ul id="guangfulist">
+							<span>汕头市潮阳区：</span>
+							<li><img src="img/video.PNG"><a href="shantou/video1.html">潮阳英歌</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 湛江市麻章区 -->
+		<ul id="shanweihaifengmain" onclick="status('shanweihaifeng','chaozhou','shantou','zhanjiang','hainan','zhongshan','guangfu','shanweilufeng','qingyuan','kejia')">
+			<li>
+				<img id='shanweihaifengsign' src="img/shanweihaifeng.png">
+				<ul id="shanweihaifeng">
+					<li>
+						<ul id="shanweihaifenglist">
+							<span>湛江市麻章区：</span>
+							<li><img src="img/video.PNG"><a href="zhanjiangmazhang/video1.html">湛江傩舞：考兵</a></li>
+							<li><img src="img/video.PNG"><a href="zhanjiangmazhang/video2.html">湛江傩舞：舞六将</a></li>
+							<!--span style="display: block;margin-top: 10px;">湛江市麻章区：湛江人龙舞</span-->
+							<li><img src="img/video.PNG"><a href="zhanjiangmazhang/video3.html">湛江人龙舞</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 汕尾海丰 -->
+		<ul id="shanweilufengmain" onclick="status('shanweilufeng','chaozhou','shantou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','qingyuan','kejia')">
+			<li>
+				<img id='shanweilufengsign' src="img/shanweilufeng.png">
+				<ul id="shanweilufeng">
+					<li>
+						<ul id="shanweilufenglist">
+							<span>汕尾市海丰县：</span>
+							<li><img src="img/video.PNG"><a href="shanweihaifeng/video1.html">海丰麒麟舞</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 清远连南-->
+		<ul id="qingyuanmain" onclick="status('qingyuan','chaozhou','shantou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','kejia')">
+			<li>
+				<img id='qingyuansign' src="img/qingyuan.png">
+				<ul id="qingyuan">
+					<li>
+						<ul id="qingyuanlist">
+							<span>清远市连南瑶族自治区：</span>
+							<li><img src="img/video.PNG"><a href="qingyuanliannan/video1.html">瑶族长鼓舞</a></li>					
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 梅州大埔 -->
+		<ul id="kejiamain" onclick="status('kejia','chaozhou','shantou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','qingyuan')">
+			<li>
+				<img id='kejiasign' src="img/kejia.png">
+				<ul id="kejia">
+					<li>
+						<ul id="kejialist">
+							<span>梅州市大埔县：</span>
+							<li><img src="img/video.PNG"><a href="meizhoudapu/video1.html">梅州鲤鱼灯</a></li>						
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function status(id,id_one,id_two,id_three,id_four,id_five,id_six,id_seven,id_eight,id_nine){
+			var element=document.getElementById(id),element_one=document.getElementById(id_one),element_two=document.getElementById(id_two),element_three=document.getElementById(id_three),element_four=document.getElementById(id_four),element_five=document.getElementById(id_five),element_six=document.getElementById(id_six),element_seven=document.getElementById(id_seven),element_eight=document.getElementById(id_eight),element_nine=document.getElementById(id_nine);
+
+			if(element.style.display.match('none')){
+				element.style.display='block';
+				element_one.style.display='none';
+				element_two.style.display='none';
+				element_three.style.display='none';
+				element_four.style.display='none';
+				element_five.style.display='none';
+				element_six.style.display='none';
+				element_seven.style.display='none';
+				element_eight.style.display='none';
+				element_nine.style.display='none';
+
+			}else{
+				element.style.display='none';
+				element_one.style.display='none';
+				element_two.style.display='none';
+				element_three.style.display='none';
+				element_four.style.display='none';
+				element_five.style.display='none';
+				element_six.style.display='none';
+				element_seven.style.display='none';
+				element_eight.style.display='none';
+				element_nine.style.display='none';
+			}
+		}		
+	</script>
+</body>
+</html>

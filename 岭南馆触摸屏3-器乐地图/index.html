@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<style type="text/css">
+		/* 潮州 */
+		#onebackground{ top: -30px; left: 90px; width: 320px; height: 200px; }
+		/* 雷州 */
+		#twobackground{ top:10px; left: 90px; width: 220px; height: 100px; }
+		/* 广府*/
+		#threebackground{ top:50px; left: 90px; width: 250px; height: 180px; }
+		/* 汕尾 */
+		#fourbackground{ top:80px; left: 90px; width: 230px; height: 160px;  }
+		/* 客家 */
+		#fivebackground{ top:130px; left: 90px; width: 300px; height: 150px;}
+	</style>
+</head>
+<body style="overflow: hidden;">
+	<div id="main">
+		<img/>
+		<div id="navi">
+			<!-- 潮州 -->
+			<ul id="one" onclick="status('onebackground','twobackground','threebackground','fourbackground','fivebackground')">
+				<li>
+					<span>潮州地区</span>
+					<ul id="onebackground">
+						<li>
+							<ul id="onelist">
+								<span>潮州地区：</span>
+								<li><img src="img/video.PNG"><a href="chaozhou/video5.html">潮州筝乐</a></li>
+								<li><img src="img/video.PNG"><a href="chaozhou/video2.html">潮阳笛套乐《雁儿落》</a></li>
+								<li><img src="img/video.PNG"><a href="chaozhou/video3.html">潮州锣鼓乐集锦</a></li>
+								<li><img src="img/video.PNG"><a href="chaozhou/video1.html">潮乐《月儿高》</a></li>
+								<li><img src="img/video.PNG"><a href="chaozhou/video4.html">潮州弦诗乐《柳青娘》（活五）《画眉跳架》</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 雷州地区 -->
+			<ul id="two" onclick="status('twobackground','onebackground','threebackground','fourbackground','fivebackground')">
+				<li>
+					<span>雷州地区</span>
+					<ul id="twobackground">
+						<li>
+							<ul id="twolist">
+								<span>雷州地区：</span>
+								<li><img src="img/video.PNG"><a href="leizhou/video1.html">吴氏锣鼓班民间吹打乐曲牌</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 广府 -->
+			<ul id="three" onclick="status('threebackground','onebackground','twobackground','fourbackground','fivebackground')">
+				<li>
+					<span>广府地区</span>
+					<ul id="threebackground">
+						<li>
+							<ul id="threelist">
+								<span>广府地区：</span>	
+								<li><img src="img/video.PNG"><a href="guangfu/video3.html">广府锣鼓柜《锦帆开》</a></li>						
+								<li><img src="img/video.PNG"><a href="guangfu/video1.html">粤乐五架头《孔雀开屏》</a></li>
+								<!--li><img src="img/video.PNG"><a href="guangfu/video2.html">莱村女</a></li-->
+								<li><img src="img/video.PNG"><a href="guangfu/video4.html">粤乐五架头《小调联奏》（硬弓）</a></li>
+								<li><img src="img/video.PNG"><a href="guangfu/video5.html">粤乐五架头《雨打芭蕉》（软弓）</a></li>
+								<!--li><img src="img/video.PNG"><a href="guangfu/video6.html">鱼游春水</a></li-->
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 汕尾 -->
+			<ul id="four" onclick="status('fourbackground','onebackground','twobackground','threebackground','fivebackground')">
+				<li>
+					<span>汕尾地区</span>
+					<ul id="fourbackground">
+						<li>
+							<ul id="fourlist">
+								<span>汕尾地区</span>
+								<li><img src="img/video.PNG"><a href="shanwei/video1.html">南塘吹打乐、正字戏</a></li>
+								<li><img src="img/video.PNG"><a href="shanwei/video2.html">紫竹观神诞斋醮科仪法乐</a></li>
+								<li><img src="img/video.PNG"><a href="shanwei/video3.html">紫竹观早晚坛功课经配乐</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 客家 -->
+			<ul id="five" onclick="status('fivebackground','onebackground','twobackground','threebackground','fourbackground')">
+				<li>
+					<span>客家地区</span>
+					<ul id="fivebackground">
+						<li>
+							<ul id="fivelist">
+								<span>客家地区：</span>
+								<li><img src="img/video.PNG"><a href="kejia/video2.html">客家汉乐丝弦乐《出水莲》《柳叶金三反》</a></li>
+								<li><img src="img/video.PNG"><a href="kejia/video3.html">客家汉乐丝弦乐《怀古》</a></li>
+								<li><img src="img/video.PNG"><a href="kejia/video1.html">客家汉乐民间大锣鼓、中军班吹打乐</a></li>			
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- 潮州 -->
+		<ul id="chaozhoumain" onclick="status('chaozhou','leizhou','guangfu','shanwei','kejia')">
+			<li class='chaozhou' style="height: 40px;width: 50px;">
+				<img id='chaozhousign' src="img/chaozhou.png">
+				<ul id="chaozhou">
+					<li>
+						<ul id="chaozhoulist">
+							<span>潮州地区：</span>
+							<li><img src="img/video.PNG"><a href="chaozhou/video5.html">潮州筝乐</a></li>
+							<li><img src="img/video.PNG"><a href="chaozhou/video2.html">潮阳笛套乐《雁儿落》</a></li>
+							<li><img src="img/video.PNG"><a href="chaozhou/video3.html">潮州锣鼓乐集锦</a></li>
+							<li><img src="img/video.PNG"><a href="chaozhou/video1.html">潮乐《月儿高》</a></li>
+							<li><img src="img/video.PNG"><a href="chaozhou/video4.html">潮州弦诗乐《柳青娘》（活五）《画眉跳架》</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 雷州地区 -->
+		<ul id="leizhoumain" onclick="status('leizhou','chaozhou','guangfu','shanwei','kejia')">
+			<li class='leizhou' style="height: 50px;width: 50px;">
+				<img id='leizhousign' src="img/leizhou.png">
+				<ul id="leizhou">
+					<li>
+						<ul id="leizhoulist">
+							<span>雷州地区：</span>
+							<li><img src="img/video.PNG"><a href="leizhou/video1.html">吴氏锣鼓班民间吹打乐曲牌</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 广府 -->
+		<ul id="guangfumain" onclick="status('guangfu','leizhou','chaozhou','shanwei','kejia')">
+			<li>
+				<img id='guangfusign' src="img/guangfu.png">
+				<ul id="guangfu">
+					<li>
+						<ul id="guangfulist">
+							<span>广府地区：</span>
+							<li><img src="img/video.PNG"><a href="guangfu/video3.html">广府锣鼓柜《锦帆开》</a></li>
+							<li><img src="img/video.PNG"><a href="guangfu/video1.html">粤乐五架头《孔雀开屏》</a></li>
+							<!--li><img src="img/video.PNG"><a href="guangfu/video2.html">莱村女</a></li-->
+							<li><img src="img/video.PNG"><a href="guangfu/video4.html">粤乐五架头《小调联奏》（硬弓）</a></li>
+							<li><img src="img/video.PNG"><a href="guangfu/video5.html">粤乐五架头《雨打芭蕉》（软弓）</a></li>
+							<!--li><img src="img/video.PNG"><a href="guangfu/video6.html">鱼游春水</a></li-->
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 汕尾 -->
+		<ul id="shanweimain" onclick="status('shanwei','guangfu','leizhou','chaozhou','kejia')">
+			<li>
+				<img id='shanweisign' src="img/shanwei.png">
+				<ul id="shanwei">
+					<li>
+						<ul id="shanweilist">
+							<span>汕尾地区：</span>
+							<li><img src="img/video.PNG"><a href="shanwei/video1.html">南塘吹打乐、正字戏</a></li>
+							<li><img src="img/video.PNG"><a href="shanwei/video2.html">紫竹观神诞斋醮科仪法乐</a></li>
+							<li><img src="img/video.PNG"><a href="shanwei/video3.html">紫竹观早晚坛功课经配乐</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 客家 -->
+		<ul id="kejiamain" onclick="status('kejia','shanwei','guangfu','leizhou','chaozhou')">
+			<li>
+				<img id='kejiasign' src="img/kejia.png">
+				<ul id="kejia">
+					<li>
+						<ul id="kejialist">
+							<span>客家地区：</span>
+							<li><img src="img/video.PNG"><a href="kejia/video2.html">客家汉乐丝弦乐《出水莲》《柳叶金三反》</a></li>
+							<li><img src="img/video.PNG"><a href="kejia/video3.html">客家汉乐丝弦乐《怀古》</a></li>
+							<li><img src="img/video.PNG"><a href="kejia/video1.html">客家汉乐民间大锣鼓、中军班吹打乐</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function status(id,id_one,id_two,id_three,id_four){
+			var element=document.getElementById(id),element_one=document.getElementById(id_one),element_two=document.getElementById(id_two),element_three=document.getElementById(id_three),element_four=document.getElementById(id_four);
+
+			if(element.style.display.match('none')){
+				element.style.display='block';
+				element_one.style.display='none';
+				element_two.style.display='none';
+				element_three.style.display='none';
+				element_four.style.display='none';
+			}else{
+				element.style.display='none';
+				element_one.style.display='none';
+				element_two.style.display='none';
+				element_three.style.display='none';
+				element_four.style.display='none';
+			}
+		}		
+	</script>
+</body>
+</html>

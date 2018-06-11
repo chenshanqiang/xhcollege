@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<style type="text/css">
+		/* 潮州 */
+		#onebackground{ top: -30px; left: 70px; width: 170px; height: 180px; }
+		/* 湛江雷州 */
+		#twobackground{ top:20px; left: 70px; width: 140px; height: 60px; }
+		/* 海南琼剧 */
+		#threebackground{ top:60px; left: 70px; width: 130px; height: 60px; }
+		/* 海南省临高县 */
+		#fourbackground{ top:100px; left: 70px; width: 120px; height: 60px; }
+		/* 广州粤剧  */
+		#fivebackground{ top:130px; left: 70px; width: 150px; height: 90px;}
+		/* 汕尾海丰  */
+		#sixbackground{ top:120px; left: 70px; width: 190px; height: 170px;}
+		/* 汕尾陆丰  */
+		#sevenbackground{ top:150px; left: 70px; width: 240px; height: 170px; }
+		/* 梅州梅江区 */
+		#eightbackground{ top:230px; left: 70px; width: 170px; height: 120px; }
+		#onelist span,#sevenlist span,#eightlist span{ display:block; margin-bottom: 10px;}
+	</style>
+</head>
+<body style="overflow: hidden;">
+	<div id="main">
+		<img/>
+		<div id="navi">
+			<!-- 潮州 -->
+			<ul id="one" onclick="status('onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground')">
+				<li>
+					<span>潮剧、潮州铁枝木偶</span>
+					<ul id="onebackground">
+						<li>
+							<ul id="onelist">
+								<span>潮剧：</span>
+								<li><img src="img/video.PNG"><a href="chaozhouchaoju/video1.html">《荔镜记》唱段《宝篆香销》</a></li>
+								<li><img src="img/video.PNG"><a href="chaozhouchaoju/video2.html">《叹伶仃》</a></li>
+								<span style="margin-top: 10px;">潮州铁枝木偶：</span>
+								<li><img src="img/video.PNG"><a href="chaozhoutiejimuou/video1.html">《龙井渡头》片段</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 湛江市雷州市 -->
+			<ul id="two" onclick="status('twobackground','onebackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground')">
+				<li>
+					<span>雷剧</span>
+					<ul id="twobackground">
+						<li>
+							<ul id="twolist">
+								<li><img src="img/video.PNG"><a href="zhanjiangleizhouleiju/video1.html">《梁红玉》唱段</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 海南琼剧 -->
+			<ul id="three" onclick="status('threebackground','onebackground','twobackground','fourbackground','fivebackground','sixbackground','sevenbackground','eightbackground')">
+				<li>
+					<span>琼剧</span>
+					<ul id="threebackground">
+						<li>
+							<ul id="threelist">
+								<li><img src="img/video.PNG"><a href="hainanqiongju/video1.html">《梁祝》选段《哭灵》</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 海南省临高县 -->
+			<ul id="four" onclick="status('fourbackground','onebackground','twobackground','threebackground','fivebackground','sixbackground','sevenbackground','eightbackground')">
+				<li>
+					<span>临高人偶戏</span>
+					<ul id="fourbackground">
+						<li>
+							<ul id="fourlist">
+								<li><img src="img/video.PNG"><a href="hainanlingaorenouxi/video1.html">临高人偶戏</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 广州粤剧 -->
+			<ul id="five" onclick="status('fivebackground','onebackground','twobackground','threebackground','fourbackground','sixbackground','sevenbackground','eightbackground')">
+				<li>
+					<span>粤剧</span>
+					<ul id="fivebackground">
+						<li>
+							<ul id="fivelist">
+								<li><img src="img/video.PNG"><a href="guangzhouyueju/video1.html">《荔枝颂》</a></li>
+								<li><img src="img/video.PNG"><a href="guangzhouyueju/video2.html">《昭君出塞》</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 汕尾海丰 -->
+			<ul id="six" onclick="status('sixbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sevenbackground','eightbackground')">
+				<li>
+					<span>白字戏、西秦戏</span>
+					<ul id="sixbackground">
+						<li>
+							<ul id="sixlist">
+								<span>汕尾海丰白字戏：</span>
+								<li><img src="img/video.PNG"><a href="shanweihaifengbaizixi/video1.html">《酬志》</a></li>
+								<li><img src="img/video.PNG"><a href="shanweihaifengbaizixi/video2.html">《当官难》</a></li>
+								<span  style="margin-top: 10px;">汕尾海丰西秦戏：</span>
+								<li><img src="img/video.PNG"><a href="shanweihaifengxiqin/video1.html">《留取丹心照汗青》第六幕</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 汕尾陆丰 -->
+			<ul id="seven" onclick="status('sevenbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','eightbackground')">
+				<li>
+					<span>正字戏、陆丰皮影</span>
+					<ul id="sevenbackground">
+						<li>
+							<ul id="sevenlist">
+								<span>正字戏：</span>
+								<li><img src="img/video.PNG"><a href="shanweilufengzhengzixi/video1.html">《刘文龙》跑布马表演片段</a></li>
+								<span  style="margin-top: 10px;">陆丰皮影戏：</span>
+								<li><img src="img/video.PNG"><a href="shanweilufengpiyingxi/video1.html">《嫦娥奔月》</a></li>
+								<li><img src="img/video.PNG"><a href="shanweilufengpiyingxi/video2.html">《乌鸦与狐狸》</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 梅州梅江区 -->
+			<ul id="eight" onclick="status('eightbackground','onebackground','twobackground','threebackground','fourbackground','fivebackground','sixbackground','sevenbackground')">
+				<li>
+					<span>广东汉剧</span>
+					<ul id="eightbackground">
+						<li>
+							<ul id="eightlist">
+								<li><img src="img/video.PNG"><a href="meizhoumeijiang/video1.html">《盘夫》唱段一</a></li>
+								<li><img src="img/video.PNG"><a href="meizhoumeijiang/video2.html">《盘夫》唱段二</a></li>
+								<li><img src="img/video.PNG"><a href="meizhoumeijiang/video3.html">《王昭君》唱段</a></li>		
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- 潮州 -->
+		<ul id="chaozhoumain" onclick="status('chaozhou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','meizhou')">
+			<li>
+				<img id='chaozhousign' src="img/chaozhou.png">
+				<ul id="chaozhou">
+					<li>
+						<ul id="chaozhoulist">
+							<span>潮州市：</span>
+							<li><img src="img/video.PNG"><a href="chaozhouchaoju/video1.html">潮剧《荔镜记》唱段《宝篆香销》</a></li>
+							<li><img src="img/video.PNG"><a href="chaozhouchaoju/video2.html">潮剧《叹伶仃》</a></li>
+							<!--span style="display:block;margin-top: 10px;">潮州铁枝木偶：</span-->
+							<li><img src="img/video.PNG"><a href="chaozhoutiejimuou/video1.html">潮州铁枝木偶《龙井渡头》片段</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 湛江市雷州市 -->
+		<ul id="zhanjiangmain" onclick="status('zhanjiang','chaozhou','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng','meizhou')">
+			<li>
+				<img id='zhanjiangsign' src="img/zhanjiang.png">
+				<ul id="zhanjiang">
+					<li>
+						<ul id="zhanjianglist">
+							<span>湛江市雷州市：</span>
+							<li><img src="img/video.PNG"><a href="zhanjiangleizhouleiju/video1.html">雷剧《梁红玉》</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 海南琼剧 -->
+		<ul id="hainanmain" onclick="status('hainan','zhanjiang','chaozhou','zhongshan','guangfu','shanweihaifeng','shanweilufeng','meizhou')">
+			<li>
+				<img id='hainansign' src="img/hainan.png">
+				<ul id="hainan">
+					<li>
+						<ul id="hainanlist">
+							<span>海南省：</span>
+							<li><img src="img/video.PNG"><a href="hainanqiongju/video1.html">琼剧《梁祝》</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 海南省临高县 -->
+		<ul id="zhongshanmain" onclick="status('zhongshan','chaozhou','zhanjiang','guangfu','shanweihaifeng','shanweilufeng','meizhou','hainan')">
+			<li>
+				<img id='zhongshansign' src="img/zhongshan.png">
+				<ul id="zhongshan">
+					<li>
+						<ul id="zhongshanlist">
+							<span>临高县：</span>
+							<li><img src="img/video.PNG"><a href="hainanlingaorenouxi/video1.html">临高人偶戏</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 广州粤剧 -->
+		<ul id="guangfumain" onclick="status('guangfu','chaozhou','zhanjiang','hainan','zhongshan','shanweihaifeng','shanweilufeng','meizhou')">
+			<li>
+				<img id='guangfusign' src="img/guangfu.png">
+				<ul id="guangfu">
+					<li>
+						<ul id="guangfulist">
+							<span>广州市：</span>
+							<li><img src="img/video.PNG"><a href="guangzhouyueju/video1.html">粤剧《荔枝颂》</a></li>
+							<li><img src="img/video.PNG"><a href="guangzhouyueju/video2.html">粤剧《昭君出塞》</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 汕尾海丰 -->
+		<ul id="shanweihaifengmain" onclick="status('shanweihaifeng','chaozhou','zhanjiang','hainan','zhongshan','guangfu','shanweilufeng','meizhou')">
+			<li>
+				<img id='shanweihaifengsign' src="img/shanweihaifeng.png">
+				<ul id="shanweihaifeng">
+					<li>
+						<ul id="shanweihaifenglist">
+							<span>汕尾市海丰市：</span>
+							<li><img src="img/video.PNG"><a href="shanweihaifengbaizixi/video1.html">白字戏《酬志》</a></li>
+							<li><img src="img/video.PNG"><a href="shanweihaifengbaizixi/video2.html">白字戏《当官难》</a></li>
+							<!--span style="display:block;margin-top: 10px;">汕尾海丰西秦戏：</span-->
+							<li><img src="img/video.PNG"><a href="shanweihaifengxiqin/video1.html">西秦戏《留取丹心照汗青》第六幕</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 汕尾陆丰 -->
+		<ul id="shanweilufengmain" onclick="status('shanweilufeng','chaozhou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','meizhou')">
+			<li>
+				<img id='shanweilufengsign' src="img/shanweilufeng.png">
+				<ul id="shanweilufeng">
+					<li>
+						<ul id="shanweilufenglist">
+							<span>汕尾市陆丰市：</span>
+							<li><img src="img/video.PNG"><a href="shanweilufengzhengzixi/video1.html">正字戏《刘文龙》跑布马表演片段</a></li>
+							<!--span style="display:block;margin-top: 10px;">陆丰皮影戏：</span-->
+							<li><img src="img/video.PNG"><a href="shanweilufengpiyingxi/video1.html">陆丰皮影戏《嫦娥奔月》</a></li>
+							<li><img src="img/video.PNG"><a href="shanweilufengpiyingxi/video2.html">陆丰皮影戏《乌鸦与狐狸》</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 梅州梅江区 -->
+		<ul id="meizhoumain" onclick="status('meizhou','chaozhou','zhanjiang','hainan','zhongshan','guangfu','shanweihaifeng','shanweilufeng')">
+			<li>
+				<img id='meizhousign' src="img/meizhou.png">
+				<ul id="meizhou">
+					<li>
+						<ul id="meizhoulist">
+							<span>梅州市梅江区：</span>
+							<li><img src="img/video.PNG"><a href="meizhoumeijiang/video1.html">广东汉剧《盘夫》选段一</a></li>
+							<li><img src="img/video.PNG"><a href="meizhoumeijiang/video2.html">广东汉剧《盘夫》选段二</a></li>
+							<li><img src="img/video.PNG"><a href="meizhoumeijiang/video3.html">广东汉剧《王昭君》唱段</a></li>							
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function status(id,id_one,id_two,id_three,id_four,id_five,id_six,id_seven){
+			var element=document.getElementById(id),element_one=document.getElementById(id_one),element_two=document.getElementById(id_two),element_three=document.getElementById(id_three),element_four=document.getElementById(id_four),element_five=document.getElementById(id_five),element_six=document.getElementById(id_six),element_seven=document.getElementById(id_seven);
+
+			if(element.style.display.match('none')){
+				element.style.display='block';
+				element_one.style.display='none';
+				element_two.style.display='none';
+				element_three.style.display='none';
+				element_four.style.display='none';
+				element_five.style.display='none';
+				element_six.style.display='none';
+				element_seven.style.display='none';
+			}else{
+				element.style.display='none';
+				element_one.style.display='none';
+				element_two.style.display='none';
+				element_three.style.display='none';
+				element_four.style.display='none';
+				element_five.style.display='none';
+				element_six.style.display='none';
+				element_seven.style.display='none';
+			}
+		}	
+	</script>
+</body>
+</html>

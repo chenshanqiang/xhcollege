@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/Song-classification.css">
+	<style type="text/css">
+	#exit{ display: inline-block; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; margin-left: 1800px; margin-top:20px; height: 60px;width: 60px;}
+	#exit:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+	</style>	
+</head>
+<body style="overflow: hidden;">
+	<div id="main">
+		<img id="exit" src="img/exit.png" onclick="ReturnMainPage()" />
+		<img class='img' id='mass-song' src="img/mass-song.png" onclick="passto('zero')">				
+		<img class='img' id='art-song' src="img/art-song.png" onclick="passto('one')">
+		<img class='img' id='children-song' src="img/children-song.png" onclick="passto('two')">
+		<img class='img' id='cantata' src="img/cantata.png" onclick="passto('three')">
+		<img class='img' id='chamber-music' src="img/chamber-music.png" onclick="passto('four')">
+		<img class='img' id='orchestral-music' src="img/orchestral-music.png" onclick="passto('five')">		
+	</div>
+	<script type="text/javascript">
+		
+	</script>
+	<script type="text/javascript">
+		function passto(id) {
+			switch (id) {
+				case 'zero':
+					window.location.href='massvideo.html';
+					break;
+				case 'one':
+					window.location.href='art-video.html';
+					break;
+				case 'two':
+					window.location.href='childrensongs.html';
+					break;
+				case 'three':
+					window.location.href='dahechang-video.html';
+					break;	
+				case 'four':
+					window.location.href='chambermusic.html';
+					break;
+				case 'five':
+					window.location.href='orchestralmusic.html';
+					break;
+			}
+		}
+		function ReturnMainPage(){//返回主界面
+            window.location.href="index.html";
+        } 
+	</script>
+	<script type="text/javascript">
+		var centerx = 500; //圆心X
+		var centery = 350; //圆心Y
+		var r = 250; //半径
+		var oimages = document.getElementsByClassName('img'); //图片集合
+		var cnt = oimages.length; //图片数
+		var da = 360 / cnt; //图片间隔角度
+		// var a0 = 0; //已旋转角度
+		var timer;
+		for (var i = 0; i < cnt; i++) {
+			oimages[i].onmouseover = stop;
+			oimages[i].onmouseout = start;
+		}
+		function posimgs() {
+			oimages[0].style.left = centerx + r * Math.cos((da * i + 0) / 180 * Math.PI) + "px";
+			oimages[0].style.top = centery + r * Math.sin((da * i + 0) / 180 * Math.PI) + "px";
+			oimages[1].style.left = centerx + r * Math.cos((da * i + 60) / 180 * Math.PI) + "px";
+			oimages[1].style.top = centery + r * Math.sin((da * i + 60) / 180 * Math.PI) + "px";
+			oimages[2].style.left = centerx + r * Math.cos((da * i + 120) / 180 * Math.PI) + "px";
+			oimages[2].style.top = centery + r * Math.sin((da * i + 120) / 180 * Math.PI) + "px";
+			oimages[3].style.left = centerx + r * Math.cos((da * i + 180) / 180 * Math.PI) + "px";
+			oimages[3].style.top = centery + r * Math.sin((da * i + 180) / 180 * Math.PI) + "px";
+			oimages[4].style.left = centerx + r * Math.cos((da * i + 240) / 180 * Math.PI) + "px";
+			oimages[4].style.top = centery + r * Math.sin((da * i + 240) / 180 * Math.PI) + "px";
+			oimages[5].style.left = centerx + r * Math.cos((da * i + 300) / 180 * Math.PI) + "px";
+			oimages[5].style.top = centery + r * Math.sin((da * i + 300) / 180 * Math.PI) + "px";
+
+		}
+		function start() {
+			timer = window.setTimeout("posimgs()");
+		}
+		start();
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿/*
+* @Author: Administrator
+* @Date:   2017-10-25 14:01:10
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-10 15:17:12
+*/
+*{ margin: 0px; padding: 0px; font-size: 12px;}
+#main{ background-image: url('../img/background-index.JPG'); background-repeat: no-repeat; height: 1080px; width: 1920px; position: relative; }
+img{cursor: pointer; }
+span{font-size: 14px;cursor: auto!important;}
+/* 发光闪烁 */	
+@-webkit-keyframes greenPulse {
+	from { background-color: #fff; -webkit-box-shadow: 0 0 9px #fff; }
+	50% { background-color: #ffd536; -webkit-box-shadow: 0 0 27px #ffd536; }
+	to { background-color: #fff; -webkit-box-shadow: 0 0 9px #fff; }
+}		
+li{ list-style:none; }
+a{ color: black; text-decoration: none; margin-left: 10px;}
+a:hover{ color: black;}
+#chaozhousign,#leizhousign,#guangfusign,#shanweisign,#kejiasign{ animation:greenPulse 1s infinite; width: 35px; height: 35px;border-radius: 50%; }
+#chaozhou li,#leizhou li,#guangfu li,#shanwei li,#kejia li{margin-top: 10px; }
+#chaozhou li:hover,#leizhou li:hover,#guangfu li:hover,#shanwei li:hover,#kejia li:hover{background-color: #fae3df;}
+#chaozhou,#leizhou,#guangfu,#shanwei,#kejia{ overflow-y:auto;overflow-x: hidden; z-index: 1;}
+.chaozhou:hover,.leizhou:hover{cursor: pointer;}
+/* 经过列表鼠标指针表位小手形 */
+#chaozhoulist li,#leizhoulist li,#guangfulist li,#shanweilist li,#kejialist li { cursor: pointer; }
+/* 列表位置 */
+#chaozhoulist,#leizhoulist,#guangfulist,#shanweilist,#kejialist{ position: absolute; top: 20px; left: 30px; }
+/* 潮州 */
+#chaozhoumain{ position: absolute; top: 370px; left: 1300px; }
+#chaozhou{ display: none; width: 330px; height: 210px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 雷州地区 */
+#leizhoumain{ position: absolute; top: 680px; left: 620px; }
+#leizhou{ display: none; width: 240px; height: 100px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 广府 */
+#guangfumain{ position: absolute; top: 440px; left: 970px; }
+#guangfu{ display: none; width: 260px; height: 180px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 汕尾*/
+#shanweimain{ position: absolute; top: 455px; left: 1195px; }
+#shanwei{ display: none; width: 230px; height: 160px; border-radius: 10%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }
+/* 客家*/
+#kejiamain{ position: absolute; top: 290px; left: 1310px; }
+#kejia{ display: none; width: 310px; height: 160px; border-radius: 5%; background-color: #FEF7F6; border: 2px solid #E0DFDA; position: absolute; top: -10px; left: 25px; }

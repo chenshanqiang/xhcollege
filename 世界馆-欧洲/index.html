@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{margin:0px;padding: 0px;}
+		#main{ background-image: url('img/background-index.jpg'); background-repeat:no-repeat; width: 1920px; height: 1080px;  }
+		ul{position: relative;top:780px;left: 135px; width: 200px;}
+		ul li{margin-bottom: 25px; }
+		a{font-size: 20px;text-decoration: none;color: #0A0707;}
+	</style>
+</head>
+<body style="overflow: hidden;">
+	<div id="main">
+		<ul>
+			<li id="eluosi" onclick="status('eluosi')"><a href="eluosi/video1.html" >俄罗斯</a></li>
+			<li id="kaierte" onclick="status('kaierte')"><a href="kaierte/video1.html" >凯尔特</a></li>
+			<li id="sugelan" onclick="status('sugelan')"><a href="sugelan/video1.html" >苏格兰</a></li>
+			<li id="xibanya" onclick="status('xibanya')"><a href="xibanya/video1.html" >西班牙</a></li>
+			<li id="luomaniya" onclick="status('luomaniya)"><a href="luomaniya/video1.html" >罗马尼亚</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function status(id){
+		var element=document.getElementById(id);
+		element.style.textDecoration='underline';
+
+	}
+	</script>
+</body>
+</html>

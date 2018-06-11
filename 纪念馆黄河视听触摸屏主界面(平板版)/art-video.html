@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/mass-song.css">
+	<link rel="stylesheet" href="src/css/smusic.css"/>
+	<script src="ckplayer/ckplayer.js"></script>
+	<script src="src/js/jquery-1.11.1.min.js"></script>
+	<style>
+		.hide{
+			display:none;
+		}
+	</style>
+</head>
+<body style="overflow: hidden;">
+	<div id="main">
+		<img id="exit" src="img/exit.png" onclick="ReturnMainPage()" />
+		<div class="clearfix">
+	        <div id="a1"></div>
+			<div id="playmusic" class="music hide" style="text-align:center;">
+				<div class="grid-music-container f-usn">
+					<div class="m-music-play-wrap" style="padding-top:10px;">
+						<div class="u-cover"></div>
+						<div class="m-now-info">
+							<h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+							<div class="m-now-controls">
+								<div class="u-control u-process">
+									<span class="buffer-process"></span>
+									<span class="current-process"></span>
+								</div>
+								<div class="u-control u-time">00:00/00:00</div>
+								<div class="u-control u-volume">
+									<div class="volume-process" data-volume="0.50">
+										<span class="volume-current"></span>
+										<span class="volume-bar"></span>
+										<span class="volume-event"></span>
+									</div>
+									<a class="volume-control"></a>
+								</div>
+							</div>
+							<div class="m-play-controls">
+								<a class="u-play-btn prev" title="上一曲"></a>
+								<a class="u-play-btn ctrl-play play" title="暂停"></a>
+								<a class="u-play-btn next" title="下一曲"></a>
+								<a class="u-play-btn mode mode-list current" title="列表循环"></a>
+								<a class="u-play-btn mode mode-random" title="随机播放"></a>
+								<a class="u-play-btn mode mode-single" title="单曲循环"></a>
+							</div>
+						</div>
+					</div>
+					<div class="f-cb">&nbsp;</div>
+					<div class="m-music-list-wrap"></div>
+					<div class="m-music-lyric-wrap">
+						<div class="inner">
+							<ul class="js-music-lyric-content">
+								<li class="eof">暂无歌词...</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	        <div id="a2" title="收起列表"><img id='stretch' src="img/stretch.png"  onclick="CloseList();"></div>
+	        <div id="a3" style="display:none" title="展开列表"><img id='shrink' src="img/shrink.png"  onclick="OpenList();"></div>
+	        <div style="display: inline-block;width: 16%;">
+	            <div id="title"><span>冼星海纪念馆</span>&nbsp;&nbsp;播放列表</div>
+	            <ul id="playerlist">
+					<li id="vli_0" onclick="playvideo(0)">《夜半歌声》</li>
+	                <li id="vli_1" onclick="playvideo(1)">《忆秦娥》--演唱：周榕</li>
+	                <li id="vli_2" onclick="playvideo(2)">《渔父词》--演唱：周榕</li>
+	                <li id="vli_3" onclick="playvideo(3)">《古诗十首（上）》--演唱：周榕，范双燕</li>
+	                <li id="vli_4" onclick="playvideo(4)">《古诗十首（下）》--演唱：周榕，范双燕</li>
+	                <li id="vli_5" onclick="changeShow()">歌曲</li>
+	                <li id="vli_6"></li>
+					<li id="vli_7"></li>
+					<li id="vli_8"></li>
+	                <li id="vli_9"></li>
+					<li id="vli_10"></li>
+					<li id="vli_11"></li>
+					<li id="vli_12"></li>
+	                <li id="vli_13"></li>
+	                <li id="vli_14"></li>
+	                <li id="vli_15"></li>                      
+				    <li id="vli_16"></li>	   
+	                <li id="vli_17"></li>
+	             </ul>
+	        </div>       
+	    </div>		
+	</div>
+	<script src="src/js/musicList.js"></script>
+	<script src="src/js/smusic.js"></script>
+	<script type="text/javascript">
+		var object = new SMusic({
+			musicList : artmusicList,
+			autoPlay  : false,  //是否自动播放
+			defaultMode : 1,   //默认播放模式，随机
+			callback   : function (obj) {  //返回当前播放歌曲信息
+				//console.log(obj);
+				/*{title: "赤血长殷", singer: "王凯", cover: "http://data.smohan.net/upload/other/cxcy/cover.jpg", src: "http://data.smohan.net/upload/other/cxcy/music.mp3", index: 4}*/
+			}
+		});
+        function playerstop() {
+            setTimeend();
+        }
+        function setTimeend() {//获取下一部视频的播放ID
+            nowD++;
+            if (nowD >= html5arr.length ) {
+                nowD = 0;
+            }
+            playvideo(nowD);
+        } 
+        function screenfull(){//视频全屏
+			var obj=document.getElementById('a1');
+			launchFullScreen(obj);
+		}
+        function launchFullScreen(element) {
+		  if(element.requestFullScreen) {
+		    element.requestFullScreen();
+		  } else if(element.mozRequestFullScreen) {
+		    element.mozRequestFullScreen();
+		  } else if(element.webkitRequestFullScreen) {
+		    element.webkitRequestFullScreen();
+		  } else if(element.msRequestFullScreen){
+		    element.msRequestFullScreen();
+		  } else if(element.oRequestFullScreen){
+		    element.oRequestFullScreen();
+		  }
+		}
+        function CloseList() {//关闭播放列表
+            document.getElementById('title').style.display='none';
+            CKobject._K_('a2').style.display = 'none';
+            CKobject._K_('playerlist').style.display = 'none';
+            CKobject._K_('a3').style.display = 'block';
+            CKobject._K_('a1').style.width = '99%';
+			CKobject._K_('playmusic').style.width = '99%';
+            CKobject.getObjectById('ckplayer_a1').width = '99%';
+        }
+        function OpenList() {//打开播放列表
+            document.getElementById('title').style.display='block';
+            CKobject._K_('a2').style.display = 'block';
+            CKobject._K_('playerlist').style.display = 'block';
+            CKobject._K_('a3').style.display = 'none';
+            CKobject._K_('a1').style.width = '83%';
+			CKobject._K_('playmusic').style.width = '83%';
+            CKobject.getObjectById('ckplayer_a1').width = '83%';
+        }
+        var nowD = 0;//目前播放的视频的编号(在数组里的编号)
+        var html5arr = new Array();//新建一个数组来保存HTML5端用到的视频地址，注意，因为本演示只有一种mp4文件，所以html5下所有用到的视频地址都是相同的，请见谅，另外，该数组是一个二维数组
+        html5arr.push(['video/artvideo/夜半歌声.mp4->video/mp4'],['video/artvideo/VTS_02_1.mp4->video/mp4'],['video/artvideo/VTS_03_1.mp4->video/mp4'],
+['video/artvideo/VTS_04_1.mp4->video/mp4'],['video/artvideo/VTS_04_2.mp4->video/mp4']);
+        function playvideo(n) {
+			object.pause();
+			$('#a1').removeClass('hide');
+			$('#playmusic').addClass('hide');
+            nowD = n;
+            var flashvars = {
+                c: 0,
+                p: 0,
+                e: 0,
+                my_url: encodeURIComponent(window.location.href)
+            };
+            for (i = 0; i < html5arr.length; i++) {//这里是用来改变右边列表背景色
+                if (i != nowD) {
+                    CKobject._K_('vli_' + i).style.backgroundColor = '#814104';
+					CKobject._K_('vli_' + 5).style.backgroundColor = '#814104';
+                }
+                else {
+                    CKobject._K_('vli_' + i).style.backgroundColor = '#9F8035';
+                }
+            }
+            CKobject.embed('ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', true, flashvars, html5arr[n]);
+        } 
+		
+        playvideo(0);
+		
+		function ReturnMainPage(){//返回主界面
+			window.location.href="Song-classification.html";
+		}
+		
+		/*添加块显示*/
+		function changeShow(){
+			CKobject.videoPause();
+			// object.play();
+			$('#a1').addClass('hide');
+			$('#playmusic').removeClass('hide');
+			CKobject._K_('vli_' + 5).style.backgroundColor = '#9F8035';
+			
+			for(i=0; i< 5 ;i++){
+				CKobject._K_('vli_' + i).style.backgroundColor = '#814104';
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-20 10:55:48
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-22 17:05:28
+*/
+*{ padding: 0px; margin:0px; }
+#main{ background-image: url('../img/background-main.JPG'); background-repeat: no-repeat; height: 1200px; width: 1920px; position: relative; }
+img{ -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; margin-top: 59px;}
+img:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+#main-enter{ position: absolute; top: 700px; left: 343px; }

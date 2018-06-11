@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{ margin: 0px; padding: 0px; }
+        #chen ul li{ list-style: none; }
+        #chen{ overflow: auto; background-color: #814104!important; border: solid 1px #814104; }
+        #chen::-webkit-scrollbar{ width:6px; height:6px; }
+        #chen::-webkit-scrollbar-button:vertical{ display:none; }
+        #chen::-webkit-scrollbar-track:vertical{ background-color:transparent; }
+        #chen::-webkit-scrollbar-track-piece{ background-color:transparent; }
+        #chen::-webkit-scrollbar-thumb:vertical{ background-color:rgba(255,255,255,.7); border-radius:6px; }
+        #chen::-webkit-scrollbar-thumb:vertical:hover,
+        #chen::-webkit-scrollbar-thumb:vertical:active { background-color: #fff; }
+        #chen,iframe{ float: left; }   
+        #shan,iframe{ position: absolute; }
+        #shan{ position: absolute; top: 200px; left: 491px; }
+        iframe{ position: absolute; }
+        #main{ width: 1920px; height: 1080px; background-image: url('img/background-video-playlist.jpg'); font-family: "Microsoft Yahei","微软雅黑","Helvetica Neue","Hiragino Sans GB",Helvetica,Tahoma,sans-serif; }
+        #chen ul li a{ text-decoration: none; }
+        #chen ul li{ text-align: center; height: 40px; border-bottom: 1px solid #874A13; color:#ffff; line-height: 40px; }
+		.show-this{background-color: #9F8035;}
+        #changescreen{ display: inline-block; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; margin-left: 1862px; margin-top:25px; }
+        #changescreen:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+        #chen a{ color: white; font-size: 14px; }
+    </style>
+</head>
+<body>
+<div id="main">
+<img id='changescreen' style="cursor:pointer;" src="img/exit.png" onclick="quit()"/>
+<div id="shan">
+<div id="chen" style="height: 598px;width: 160px;background-color: rgba(129,65,4,0.95);">
+    <ul class="chapter">
+        <li style="font-size: 16px;background-color:#603309;height:50px;line-height: 50px;">黄河大合唱</li>
+        <li class="chapter-item show-this"><a href="first-movement.html" target="iframe_a">第一章</a></li>
+        <li class="chapter-item"><a href="second-move.html" target="iframe_a">第二章</a></li>
+        <li class="chapter-item"><a href="third-movement.html" target="iframe_a">第三章</a></li>
+        <li class="chapter-item"><a href="forth-movement.html" target="iframe_a">第四章</a></li>
+        <li class="chapter-item"><a href="fifth-movement.html" target="iframe_a">第五章</a></li>
+        <li class="chapter-item"><a href="sixth-movement.html" target="iframe_a">第六章</a></li>
+        <li class="chapter-item"><a href="seventh-movement.html" target="iframe_a">第七章</a></li>
+        <li class="chapter-item"><a href="eigth-movement.html" target="iframe_a">第八章</a></li>
+    </ul>
+</div>    
+<iframe src="first-movement.html" name="iframe_a" id="external-frame" width="900" height="600" frameborder="0" scrolling="no" onload="setIframeHeight(this)" > 
+</iframe>
+</div>
+</div>
+<script src="src/js/jquery-1.11.1.min.js"></script>
+<script>
+    function setIframeHeight(iframe) {
+        if (iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        }
+    }
+    function quit() { //返回主界面
+        window.location.href = "index.html";
+    }
+	
+	$('.chapter .chapter-item').click(function(){
+		$('.chapter .chapter-item').removeClass('show-this');
+		$(this).addClass('show-this');
+	});
+</script>
+</body>
+</html>

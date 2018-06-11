@@ -1,0 +1,21 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-11 09:09:16
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-28 13:16:12
+*/
+*{ padding: 0px; margin: 0px; font-size: 12px; color:#fff; }
+#exit{ display: inline-block; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; margin-left: 1800px; margin-top:20px; height: 60px;width: 60px;}
+#exit:hover{ -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+#main{ background-image: url('../img/background-mass-song.jpg'); background-repeat: no-repeat; width: 1920px; height: 1200px; }
+.clearfix{ width: 95%; height: 83%; position: relative; top: 2%; left: 2.5%; }
+/* li{ list-style: none; vertical-align: bottom;padding-left: 10px; } */
+#title{background-color: #603309;width: 90%;height: 80px;line-height: 80px; font-size:20px;padding-left:10%;}
+span{ font-family:微软雅黑; font-size: 25px; }
+#a1 { width: 83%; height: 100%; float: left; }
+.music{width: 83%; height: 100%; float: left; background-color:transparent;}
+#a2, #a3 { width: 0.9%; height: 100%; float: left; color: #FFF; background-color: #25262A; line-height: 850px;}
+img{ cursor:pointer; }
+#playerlist {width: 100%; height: 916px; overflow: auto; float: left; background-color: #814104; font-size: 12px; }
+#playerlist li{ list-style: none; height: 50px; line-height: 50px;font-size: 25px; padding-bottom: 2px; border-bottom: 1px solid #874A13; overflow:hidden; padding-left: 10%; cursor:pointer; }
+#shrink{ margin-left: 7px; }
